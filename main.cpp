@@ -4,35 +4,49 @@
 #include <iomanip>
 #include <algorithm>
 #include <stdlib.h>
-#include <time.h>
+#include <ctime>
+#include <fstream>
+#include <ctype.h>
+#include <sstream>
 
 struct mokinys {
 	std::string vardas, pavarde;
-	int n = 0, egzaminorez;
+	int egzaminorez;
 	std::vector<int> ndrez;
 	double vid, med, galutinis_vid, galutinis_med;
 };
 
 std::vector<mokinys> mok;
 
-void skaitymas();
+void irasimas(int & ilgvardas, int & ilgpavarde);
+void skaitymas(int & ilgvardas, int & ilgpavarde);
 void vidurkis();
 void mediana();
-void spausdinimas();
+bool pagal_varda(const mokinys &a, const mokinys &b);
+void spausdinimas(int ilgvardas, int ilgpavarde);
 void atsitiktinis(int i, int k);
 
 int main() {
+	int t, ilgvardas = 0, ilgpavarde = 0;
 	setlocale(LC_ALL, "Lithuanian");
 	srand(time(NULL));
-	skaitymas();
+	std::cout << "Ar norite duomenis ivesti ar nuskaityti nuo failo? \n";
+	std::cout << "jei norite įvesti duomenis tada rašykite 0, jei skaityti - 1 \n";
+	std::cin >> t;
+	if (t == 0) {
+		irasimas(ilgvardas, ilgpavarde);
+	}
+	if (t == 1) {
+		skaitymas(ilgvardas, ilgpavarde);
+	}
 	vidurkis();
 	mediana();
-	spausdinimas();
+	spausdinimas(ilgvardas, ilgpavarde);
 	return 0;
 }
 
-void skaitymas() {
-	int b,k;
+void irasimas(int & ilgvardas, int & ilgpavarde) {
+	int b, k;
 	char ats;
 	std::string a;
 	std::cout << "iveskite varda: ";
@@ -41,8 +55,14 @@ void skaitymas() {
 	while (a != "0") {
 		mok.push_back(mokinys());
 		mok[i].vardas = a;
+		if (mok[i].vardas.size() > ilgvardas) {
+			ilgvardas = mok[i].vardas.size();
+		}
 		std::cout << "iveskite pavarde: ";
 		std::cin >> mok[i].pavarde;
+		if (mok[i].pavarde.size() > ilgpavarde) {
+			ilgpavarde = mok[i].pavarde.size();
+		}
 		std::cout << "Ar norite, kad mokinio egzamino ir namų darbų rezultatai būtu generuojami atsitiktinai? \n";
 		std::cout << "Jei taip rašykite t, jei ne - n \n";
 		std::cin >> ats;
@@ -73,6 +93,34 @@ void skaitymas() {
 	}
 }
 
+void skaitymas(int & ilgvardas, int & ilgpavarde) {
+	std::ifstream d("kursiokai.txt");
+	std::string t;
+	int i = 0, n;
+	if (d) {
+		while (!d.eof()) {
+			std::getline(d, t, '\n');
+			mok.push_back(mokinys());
+			std::istringstream iss(t);
+			iss >> mok[i].vardas;
+			if (mok[i].vardas.size() > ilgvardas) {
+				ilgvardas = mok[i].vardas.size();
+			}
+			iss >> mok[i].pavarde;
+			if (mok[i].pavarde.size() > ilgpavarde) {
+				ilgpavarde = mok[i].pavarde.size();
+			}
+			while (iss >> n) {
+				mok[i].ndrez.push_back(n);
+			}
+			mok[i].egzaminorez = n;
+			mok[i].ndrez.pop_back();
+			i++;
+		}
+	}
+	d.close();
+}
+
 void atsitiktinis(int i, int k) {
 	int t;
 	for (int j = 0; j < k; j++) {
@@ -89,7 +137,6 @@ void vidurkis() {
 		for (int j = 0; j < mok[i].ndrez.size(); j++) {
 			s = s + mok[i].ndrez[j];
 		}
-		std::cout << s << "\n";
 		mok[i].vid = (double)s / mok[i].ndrez.size();
 		mok[i].galutinis_vid = 0.4*mok[i].vid + 0.6*mok[i].egzaminorez;
 	}
@@ -108,23 +155,30 @@ void mediana() {
 	}
 }
 
-void spausdinimas() {
+bool pagal_varda(const mokinys &a, const mokinys &b){
+
+	return a.pavarde < b.pavarde;
+
+}
+
+void spausdinimas(int ilgvardas, int ilgpavarde) {
 	char p;
+	sort(mok.begin(), mok.end(), pagal_varda);
 	std::cout << "jei galutini bala skaiciuoti pagal vidurki rasykite v, jei pagal mediana - m \n";
 	std::cin >> p;
 	if (p == 'v') {
-		std::cout << std::left << std::setw(20) << "Pavardė" << std::left << std::setw(20) << "Vardas" << std::left << std::setw(20) << "Galutinis (Vid.)" << std::endl;
-		std::cout << std::string(60, '-') << "\n";
+		std::cout << std::left << std::setw(ilgpavarde+2) << "Pavardė" << std::left << std::setw(ilgvardas+1) << "Vardas" << std::left << std::setw(20) << "Galutinis (Vid.)" << std::endl;
+		std::cout << std::string(ilgpavarde + 2 + ilgvardas + 1 + 20, '-') << "\n";
 		for (int i = 0; i < mok.size(); i++) {
-			std::cout << std::left << std::setw(20) << mok[i].pavarde << std::left << std::setw(20) << mok[i].vardas;
+			std::cout << std::left << std::setw(ilgpavarde+1) << mok[i].pavarde << std::left << std::setw(ilgvardas+1) << mok[i].vardas;
 			std::cout << std::left << std::setw(20) << std::fixed << std::setprecision(2) << mok[i].galutinis_vid << "\n";
 		}
 	}
 	else if (p == 'm') {
-		std::cout << std::left << std::setw(20) << "Pavardė" << std::left << std::setw(20) << "Vardas" << std::left << std::setw(20) << "Galutinis (Med.)" << std::endl;
-		std::cout << std::string(60, '-') << "\n";
+		std::cout << std::left << std::setw(ilgpavarde+2) << "Pavardė" << std::left << std::setw(ilgvardas+1) << "Vardas" << std::left << std::setw(20) << "Galutinis (Med.)" << std::endl;
+		std::cout << std::string(ilgpavarde + 2 + ilgvardas + 1 + 20, '-') << "\n";
 		for (int i = 0; i < mok.size(); i++) {
-			std::cout << std::left << std::setw(20) << mok[i].pavarde << std::left << std::setw(20) << mok[i].vardas;
+			std::cout << std::left << std::setw(ilgpavarde+1) << mok[i].pavarde << std::left << std::setw(ilgvardas+1) << mok[i].vardas;
 			std::cout << std::left << std::setw(20) << std::fixed << std::setprecision(2) << mok[i].galutinis_med << "\n";
 		}
 	}
