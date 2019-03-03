@@ -1,0 +1,70 @@
+1. Kai N = 10, nd pažymių sk 100.
+
+    a) Galutinį balą skaičiuoja pagal mediana.
+        bandymas Nr1: 0,012532 sek.
+        bandymas Nr2: 0,0135004 sek.
+        bandymas Nr3: 0,0135118 sek.
+        Vidurkis: 0,0131814 sek.
+
+    b) Galutinį balą skaičiuoja pagal vidurkį.
+        bandymas Nr1: 0,0122817 sek.
+        bandymas Nr2: 0,012386 sek.
+        bandymas Nr3: 0,0133871 sek.
+        Vidurkis: 0,0126849333 sek.
+
+2. Kai N = 100, nd pažymių sk 100.
+
+    a) Galutinį balą skaičiuoja pagal mediana.
+        bandymas Nr1: 0,0249611 sek.
+        bandymas Nr2: 0,0214487 sek.
+        bandymas Nr3: 0,0213401 sek.
+        Vidurkis: 0,0225833 sek.
+
+    b) Galutinį balą skaičiuoja pagal vidurkį.
+        bandymas Nr1: 0,0170189 sek.
+        bandymas Nr2: 0,0205682 sek.
+        bandymas Nr3: 0,0201033 sek.
+        Vidurkis: 0,0192301 sek.
+
+3. Kai N = 1000, nd pažymių sk 1000.
+
+    a) Galutinį balą skaičiuoja pagal mediana.
+        bandymas Nr1: 0,45903 sek.
+        bandymas Nr2: 0,497542 sek.
+        bandymas Nr3: 0,458606 sek.
+        Vidurkis: 0,471726 sek.
+
+    b) Galutinį balą skaičiuoja pagal vidurkį.
+        bandymas Nr1: 0,31665 sek.
+        bandymas Nr2: 0,343741 sek.
+        bandymas Nr3: 0,320412 sek.
+        Vidurkis: 0,326934 sek.
+
+4. Kai N = 10000, nd pažymių sk 10000.
+
+    a) Galutinį balą skaičiuoja pagal mediana.
+        bandymas Nr1: 48,794 sek.
+        bandymas Nr2: 48,7897 sek.
+        bandymas Nr3: 49,2033 sek.
+        Vidurkis: 48,929 sek.
+
+    b) Galutinį balą skaičiuoja pagal vidurkį.
+        bandymas Nr1: 29,3804 sek.
+        bandymas Nr2: 29,462 sek.
+        bandymas Nr3: 29,302 sek.
+        Vidurkis: 29,38147 sek.
+
+5. Kai N = 100000, nd pažymių sk 10000.
+
+    a) Galutinį balą skaičiuoja pagal mediana.
+        bandymas Nr1: 531,408 sek.
+        bandymas Nr2: 506,007 sek.
+        bandymas Nr3: 504,875 sek.
+        Vidurkis: 514,0967 sek.
+
+    b) Galutinį balą skaičiuoja pagal vidurkį.
+
+        bandymas Nr1: 315,797 sek.
+        bandymas Nr2: 314,795 sek.
+        bandymas Nr3: 312,183 sek.
+        Vidurkis: 314,258 sek.

@@ -9,6 +9,24 @@
 
 ## Versiju istorija
 
+# [v0.4](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.4)
+
+***Prideta***
+
+- irasymas.cpp ir skaitymas.cpp (skirtingi cpp failai, ka butu lengviau atskirti kas vyksta kai žmogus nori ivesti ar nuskaityti duomenis)
+- Funkcija "failu_generavimas", kuri sukuria faila su atsitiktiniais duomenimis.
+- Programa pradeša jei faile yra per didelis skaicius prie pažymiu ar vietoje skaiciaus yra raide ir kurioje eiluteje yra tokia klaida.
+- Pridetas failas, kuriame buvo atlikta programos veikimo greicio analize (darant analize žmogus ranka nenurodinejo ar nori nuskaityti nuo failo ar pan., tai buvo nurodyta programos viduje, kad skaiciavimai butu tikslesni).
+
+**Koreguota**
+
+- Pataisyta, kad programa praneštu žmogui jei ka ivede neteisingai (dabar nebera problemos ir su pvz a1).
+- Pataisytos funkcijos mediana ir vidurkis.
+- Funcija "spausdinimas" neišveda rezultato i ekrana o išsaugo skirtinguose failuose pagal galutini bala.
+- Pakeista biblioteka iš ctime i chrono.
+- Pataisytas Makefilas.
+- Papildytas README failas.
+
 # [v0.3](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.3)
 
 ***Prideta***

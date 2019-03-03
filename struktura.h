@@ -6,26 +6,29 @@
 #include <iomanip>
 #include <algorithm>
 #include <stdlib.h>
-#include <ctime>
+#include <chrono>
 #include <fstream>
 #include <ctype.h>
 #include <sstream>
 #include <exception>
+#include <numeric>
 
-
-struct mokinys {
+struct mokinys
+{
 	std::string vardas, pavarde;
 	int n = 0, egzaminorez;
 	std::vector<int> ndrez;
-	double vid, med, galutinis_vid, galutinis_med;
+	double vid, med, galutinis;
 };
 
-void irasimas(std::vector<mokinys> & mok, int & ilgvardas, int & ilgpavarde);
-void skaitymas(std::vector<mokinys> & mok, int & ilgvardas, int & ilgpavarde);
-void vidurkis(std::vector<mokinys> & mok);
-void mediana(std::vector<mokinys> & mok);
-void atsitiktinis(std::vector<mokinys> & mok, int i, int k);
+void irasimas(std::vector<mokinys> &mok, int &ilgvardas, int &ilgpavarde);
+void skaitymas(std::vector<mokinys> &mok, int &ilgvardas, int &ilgpavarde);
+int tikrinimas(std::string a);
+void vidurkis(std::vector<mokinys> &mok, int i);
+void mediana(std::vector<mokinys> &mok, int i);
+void atsitiktinis(std::vector<mokinys> &mok, int i, int k);
 bool pagal_varda(const mokinys &a, const mokinys &b);
 void spausdinimas(std::vector<mokinys> mok, int ilgvardas, int ilgpavarde);
+void failu_generavimas();
 
 #endif
