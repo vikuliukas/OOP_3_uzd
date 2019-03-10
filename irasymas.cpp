@@ -73,3 +73,26 @@ void irasimas(std::vector<mokinys> &mok, int &ilgvardas, int &ilgpavarde)
 		}
 	}
 }
+
+int tikrinimas(std::string a)
+{
+	while (!std::all_of(a.begin(), a.end(), ::isdigit) && std::stoi(a) < 0 && std::stoi(a) > 10)
+	{
+		std::cin.clear();
+		std::cin.ignore();
+		std::cout << "Įveskite skaičių nuo 0 iki 10 \n";
+		std::cin >> a;
+	}
+	return std::stoi(a);
+}
+
+void atsitiktinis(std::vector<mokinys> &mok, int i, int k)
+{
+	int t;
+	for (int j = 0; j < k; j++)
+	{
+		t = rand() % 10 + 1;
+		mok[i].ndrez.push_back(t);
+		std::cout << mok[i].ndrez[j] << "\n";
+	}
+}

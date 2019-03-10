@@ -2,7 +2,7 @@
 
 void skaitymas(std::vector<mokinys> &mok, int &ilgvardas, int &ilgpavarde)
 {
-	std::ifstream d("kursiokai.txt");
+	std::ifstream d("kursiokai10000.txt");
 	std::string t, t1;
 	int i = 0, n;
 	if (d.fail())
@@ -43,7 +43,7 @@ void skaitymas(std::vector<mokinys> &mok, int &ilgvardas, int &ilgpavarde)
 void failu_generavimas()
 {
 	const int N = 100000;
-	std::ofstream r("kursiokai.txt");
+	std::ofstream r("kursiokai10000.txt");
 	for (int i = 0; i < N; i++)
 	{
 		r << "Vardas" << i + 1 << " "

@@ -20,11 +20,13 @@ int main()
 		std::cin >> t;
 	}
 	
+	//t = "1";
+
 	if (t == "0")
 	{
 		irasimas(mok, ilgvardas, ilgpavarde);
 	}
-	if (t == "1")
+	else
 	{
 		try
 		{
@@ -42,7 +44,29 @@ int main()
 			return 0;
 		}
 	}
+
+	std::cout << "jei galutini bala skaiciuoti pagal vidurki rasykite 0, jei pagal mediana - 1 \n";
+	std::cin >> t;
+	while (t != "0" && t != "1")
+	{
+		std::cin.clear();
+		std::cin.ignore();
+		std::cout << "Įveskite skaičių 0 - skaiciavimui pagal vidurki arba 1 - skaiciavimui pagal mediana. \n";
+		std::cin >> t;
+	}
+
+	//t = "0";
+
+	if(t == "0"){
+		vidurkis(mok);
+	}
+	else{
+		mediana(mok);
+	}
+
 	spausdinimas(mok, ilgvardas, ilgpavarde);
+
+
 	auto pabaiga = std::chrono::high_resolution_clock::now();
 	std::chrono::duration<double> trukme = pabaiga - pradzia;
 	std::cout << "užtruko " << trukme.count() << " sek.\n";

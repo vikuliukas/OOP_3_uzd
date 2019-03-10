@@ -9,6 +9,13 @@
 
 ## Versiju istorija
 
+# [v0.41](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.41)
+
+**Koreguota**
+
+- Pataysyta versija 0.4. Programa dabar surikuoja studentus pagal galutinius pažymius ir tada nukopijuoja i skirtingus vektorius pagal galutini bala.
+- Perdaryti testai, kuriu rezultatai išsaugoti faile bandymai (programa užtrunka dvigubai ilgiau skirstydama i skirtingus vektorius nei iš karto rašant i failus).
+
 # [v0.4](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.4)
 
 ***Prideta***

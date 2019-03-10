@@ -1,70 +1,73 @@
+Testavimo  metu žmogus neįvedinėjo ar nori nuskaityti nuo failo ar pagal kurį parametrą skaičiuoti, viskas buvo nurodyta programos viduje,
+kad testavimas būtų tikslesnis.
+
 1. Kai N = 10, nd pažymių sk 100.
 
     a) Galutinį balą skaičiuoja pagal mediana.
-        bandymas Nr1: 0,012532 sek.
-        bandymas Nr2: 0,0135004 sek.
-        bandymas Nr3: 0,0135118 sek.
-        Vidurkis: 0,0131814 sek.
+        bandymas Nr1: 0.0293456 sek.
+        bandymas Nr2: 0.0273094 sek.
+        bandymas Nr3: 0.027549 sek.
+        Vidurkis: 0.028068 sek.
 
     b) Galutinį balą skaičiuoja pagal vidurkį.
-        bandymas Nr1: 0,0122817 sek.
-        bandymas Nr2: 0,012386 sek.
-        bandymas Nr3: 0,0133871 sek.
-        Vidurkis: 0,0126849333 sek.
+        bandymas Nr1: 0.0308373 sek.
+        bandymas Nr2: 0.0267042 sek.
+        bandymas Nr3: 0.0251909 sek.
+        Vidurkis: 0.027577 sek.
 
 2. Kai N = 100, nd pažymių sk 100.
 
     a) Galutinį balą skaičiuoja pagal mediana.
-        bandymas Nr1: 0,0249611 sek.
-        bandymas Nr2: 0,0214487 sek.
-        bandymas Nr3: 0,0213401 sek.
-        Vidurkis: 0,0225833 sek.
+        bandymas Nr1: 0.0526318 sek.
+        bandymas Nr2: 0.0517445 sek. 
+        bandymas Nr3: 0.0496651 sek.
+        Vidurkis: 0.051347 sek.
 
     b) Galutinį balą skaičiuoja pagal vidurkį.
-        bandymas Nr1: 0,0170189 sek.
-        bandymas Nr2: 0,0205682 sek.
-        bandymas Nr3: 0,0201033 sek.
-        Vidurkis: 0,0192301 sek.
+        bandymas Nr1: 0.0467052 sek.
+        bandymas Nr2: 0.0470261 sek.
+        bandymas Nr3: 0.0456488 sek.
+        Vidurkis: 0.04646 sek.
 
 3. Kai N = 1000, nd pažymių sk 1000.
 
     a) Galutinį balą skaičiuoja pagal mediana.
-        bandymas Nr1: 0,45903 sek.
-        bandymas Nr2: 0,497542 sek.
-        bandymas Nr3: 0,458606 sek.
-        Vidurkis: 0,471726 sek.
+        bandymas Nr1: 1.12555 sek.
+        bandymas Nr2: 1.14588 sek.
+        bandymas Nr3: 1.14203 sek.
+        Vidurkis: 1.13782 sek.
 
     b) Galutinį balą skaičiuoja pagal vidurkį.
-        bandymas Nr1: 0,31665 sek.
-        bandymas Nr2: 0,343741 sek.
-        bandymas Nr3: 0,320412 sek.
-        Vidurkis: 0,326934 sek.
+        bandymas Nr1: 0.798712 sek.
+        bandymas Nr2: 0.800111 sek.
+        bandymas Nr3: 0.843328 sek.
+        Vidurkis: 0.81405 sek.
 
 4. Kai N = 10000, nd pažymių sk 10000.
 
     a) Galutinį balą skaičiuoja pagal mediana.
-        bandymas Nr1: 48,794 sek.
-        bandymas Nr2: 48,7897 sek.
-        bandymas Nr3: 49,2033 sek.
-        Vidurkis: 48,929 sek.
+        bandymas Nr1: 122.489 sek.
+        bandymas Nr2: 120.156 sek.
+        bandymas Nr3: 119.759 sek.
+        Vidurkis: 120.801 sek.
 
     b) Galutinį balą skaičiuoja pagal vidurkį.
-        bandymas Nr1: 29,3804 sek.
-        bandymas Nr2: 29,462 sek.
-        bandymas Nr3: 29,302 sek.
-        Vidurkis: 29,38147 sek.
+        bandymas Nr1: 74.4899 sek.
+        bandymas Nr2: 73.9067 sek.
+        bandymas Nr3: 73.9671 sek.
+        Vidurkis: 74.1212 sek.
 
 5. Kai N = 100000, nd pažymių sk 10000.
 
     a) Galutinį balą skaičiuoja pagal mediana.
-        bandymas Nr1: 531,408 sek.
-        bandymas Nr2: 506,007 sek.
-        bandymas Nr3: 504,875 sek.
-        Vidurkis: 514,0967 sek.
+        bandymas Nr1: 1269.48 sek.
+        bandymas Nr2: 1301.34 sek.
+        bandymas Nr3: 1257.67 sek.
+        Vidurkis: 1276.16 sek.
 
     b) Galutinį balą skaičiuoja pagal vidurkį.
 
-        bandymas Nr1: 315,797 sek.
-        bandymas Nr2: 314,795 sek.
-        bandymas Nr3: 312,183 sek.
-        Vidurkis: 314,258 sek.
+        bandymas Nr1: 856.188 sek.
+        bandymas Nr2: 842.978 sek.
+        bandymas Nr3: 874.376 sek.
+        Vidurkis: 857.847 sek.
