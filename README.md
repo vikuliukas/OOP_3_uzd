@@ -1,4 +1,4 @@
-# Duomenu apdorojimas (2 oji uûduotis)
+# Duomenu apdorojimas (2 oji u≈æduotis)
 
 ## Idiegimas (Unix kompiuteryje)
 
@@ -20,17 +20,17 @@
 
 ***Prideta***
 
-- irasymas.cpp ir skaitymas.cpp (skirtingi cpp failai, ka butu lengviau atskirti kas vyksta kai ûmogus nori ivesti ar nuskaityti duomenis)
+- irasymas.cpp ir skaitymas.cpp (skirtingi cpp failai, ka butu lengviau atskirti kas vyksta kai ≈æmogus nori ivesti ar nuskaityti duomenis)
 - Funkcija "failu_generavimas", kuri sukuria faila su atsitiktiniais duomenimis.
-- Programa pradeöa jei faile yra per didelis skaicius prie paûymiu ar vietoje skaiciaus yra raide ir kurioje eiluteje yra tokia klaida.
-- Pridetas failas, kuriame buvo atlikta programos veikimo greicio analize (darant analize ûmogus ranka nenurodinejo ar nori nuskaityti nuo failo ar pan., tai buvo nurodyta programos viduje, kad skaiciavimai butu tikslesni).
+- Programa prade≈°a jei faile yra per didelis skaicius prie pa≈æymiu ar vietoje skaiciaus yra raide ir kurioje eiluteje yra tokia klaida.
+- Pridetas failas "bandymai", kuriame buvo atlikta programos veikimo greicio analize (darant analize ≈æmogus ranka nenurodinejo ar nori nuskaityti nuo failo ar pan., tai buvo nurodyta programos viduje, kad skaiciavimai butu tikslesni).
 
 **Koreguota**
 
-- Pataisyta, kad programa praneötu ûmogui jei ka ivede neteisingai (dabar nebera problemos ir su pvz a1).
+- Pataisyta, kad programa prane≈°tu ≈æmogui jei ka ivede neteisingai (dabar nebera problemos ir su pvz a1).
 - Pataisytos funkcijos mediana ir vidurkis.
-- Funcija "spausdinimas" neiöveda rezultato i ekrana o iösaugo skirtinguose failuose pagal galutini bala.
-- Pakeista biblioteka iö ctime i chrono.
+- Funcija "spausdinimas" nei≈°veda rezultato i ekrana o i≈°saugo skirtinguose failuose pagal galutini bala.
+- Pakeista biblioteka i≈° ctime i chrono.
 - Pataisytas Makefilas.
 - Papildytas README failas.
 
@@ -42,8 +42,8 @@
 
 **Koreguota**
 
-- Pakeista, kad programa praneötu ûmogui, jei vietoje skaiciaus ivede raide ar netinkanti skaiciu ir leidûia ivesti iö naujo. (taciau yra problema jei reikia ivesti 1 o ûmogus iveda pvz. a1)
-- Duomenu skaitymo iö failo funkcija, programa praneöa jei neranda failo.
+- Pakeista, kad programa prane≈°tu ≈æmogui, jei vietoje skaiciaus ivede raide ar netinkanti skaiciu ir leid≈æia ivesti i≈° naujo. (taciau yra problema jei reikia ivesti 1 o ≈æmogus iveda pvz. a1)
+- Duomenu skaitymo i≈° failo funkcija, programa prane≈°a jei neranda failo.
 - Pakeistas Makefilas.
 - Papildytas README failas.
 
@@ -52,11 +52,11 @@
 ***Prideta***
 
 - Duomenu skaitymo nuo failo funkcija.
-- Funkcija, kuri pavardes suruöiuoja abeceles tvarka.
+- Funkcija, kuri pavardes suru≈°iuoja abeceles tvarka.
 
 **Koreguota**
 
-- Rezultatus atsdausdina iölygiuotai pagal ilgiausia varda ir pavarde.
+- Rezultatus atsdausdina i≈°lygiuotai pagal ilgiausia varda ir pavarde.
 - Papildytas README failas.
 
 # [v0.1](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.1)
