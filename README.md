@@ -1,4 +1,4 @@
-# Duomenu apdorojimas (2 oji užduotis)
+﻿# Duomenu apdorojimas (2 oji užduotis)
 
 ## Idiegimas (Unix kompiuteryje)
 
@@ -8,6 +8,19 @@
 - `./main`
 
 ## Versiju istorija
+
+# [v0.5](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.5)
+
+***Prideta***
+
+- Skirtingi aplankalai, kuriose sudėta skirtingos programos versijos naudojančios std::vector, std::list ir std::deque.
+
+**Koreguota**
+
+- Koreguota programos v0.41 versija su skirtingais konteineriais.
+- Failas bandymai dabar saugo testavimų rezultatus, kurie rodo programos veikimo laiką naudojant skirtingus konteinerius.
+- Pataisytas Makefilas.
+- Papildytas README failas.
 
 # [v0.41](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.41)
 
@@ -30,7 +43,7 @@
 - Pataisyta, kad programa praneštu žmogui jei ka ivede neteisingai (dabar nebera problemos ir su pvz a1).
 - Pataisytos funkcijos mediana ir vidurkis.
 - Funcija "spausdinimas" neišveda rezultato i ekrana o išsaugo skirtinguose failuose pagal galutini bala.
-- Pakeista biblioteka iÅ¡ ctime i chrono.
+- Pakeista biblioteka iš ctime i chrono.
 - Pataisytas Makefilas.
 - Papildytas README failas.
 

@@ -3,7 +3,7 @@
 int main()
 {
 	auto pradzia = std::chrono::high_resolution_clock::now();
-	std::vector<mokinys> mok;
+	std::deque<mokinys> mok;
 	std::string t;
 
 	int ilgvardas = 10, ilgpavarde = 10, x;
@@ -19,7 +19,7 @@ int main()
 		std::cout << "Įveskite skaičių 0 - duomenų įvedimui arba 1 - duomenų nuskaitymui. \n";
 		std::cin >> t;
 	}
-	
+
 	//t = "1";
 
 	if (t == "0")
@@ -57,15 +57,16 @@ int main()
 
 	//t = "0";
 
-	if(t == "0"){
+	if (t == "0")
+	{
 		vidurkis(mok);
 	}
-	else{
+	else
+	{
 		mediana(mok);
 	}
 
 	spausdinimas(mok, ilgvardas, ilgpavarde);
-
 
 	auto pabaiga = std::chrono::high_resolution_clock::now();
 	std::chrono::duration<double> trukme = pabaiga - pradzia;
