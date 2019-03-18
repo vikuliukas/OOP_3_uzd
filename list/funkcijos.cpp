@@ -13,6 +13,7 @@ void vidurkis(std::list<mokinys> &mok)
 			it->vid = std::accumulate(it->ndrez.begin(), it->ndrez.end(), 0.0) / it->ndrez.size();
 		}
 		it->galutinis = 0.40 * it->vid + 0.60 * it->egzaminorez;
+		it->ndrez.clear();
 	}
 }
 
@@ -42,6 +43,7 @@ void mediana(std::list<mokinys> &mok)
 			}
 		}
 		it->galutinis = (double)0.4 * it->med + 0.6 * it->egzaminorez;
+		it->ndrez.clear();
 	}
 }
 
@@ -55,7 +57,7 @@ bool pagal_pavarde(const mokinys &a, const mokinys &b)
 	return a.pavarde < b.pavarde;
 }
 
-void spausdinimas(std::list<mokinys> mok, int ilgvardas, int ilgpavarde, std::list<mokinys> &saunuoliai, std::list<mokinys> &vargsiukai)
+void spausdinimas(std::list<mokinys> &mok, int ilgvardas, int ilgpavarde, std::list<mokinys> &saunuoliai, std::list<mokinys> &vargsiukai)
 {
 	mok.sort(pagal_galutini);
 
@@ -69,6 +71,7 @@ void spausdinimas(std::list<mokinys> mok, int ilgvardas, int ilgpavarde, std::li
 	}
 	saunuoliai.assign(mok.begin(), std::next(mok.begin(), i));
 	vargsiukai.assign(std::next(mok.begin(), i), mok.end());
+	mok.clear();
 	saunuoliai.sort(pagal_pavarde);
 	vargsiukai.sort(pagal_pavarde);
 

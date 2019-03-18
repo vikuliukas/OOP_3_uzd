@@ -45,13 +45,13 @@ void skaitymas(std::list<mokinys> &mok, int &ilgvardas, int &ilgpavarde)
 
 void failu_generavimas()
 {
-	const int N = 10000;
+	const int N = 100;
 	std::ofstream r("kursiokai.txt");
 	for (int i = 0; i < N; i++)
 	{
 		r << "Vardas" << i + 1 << " "
 		  << "Pavardė" << i + 1;
-		for (int j = 0; j < 10000; j++)
+		for (int j = 0; j < 100; j++)
 		{
 			r << " " << rand() % 10 + 1;
 		}

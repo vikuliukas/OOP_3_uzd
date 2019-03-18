@@ -48,7 +48,7 @@ void failu_generavimas()
 	{
 		r << "Vardas" << i + 1 << " "
 		  << "Pavardė" << i + 1;
-		for (int j = 0; j < 10000; j++)
+		for (int j = 0; j < 1000; j++)
 		{
 			r << " " << rand() % 10 + 1;
 		}

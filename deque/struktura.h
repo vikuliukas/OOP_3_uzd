@@ -30,7 +30,7 @@ void mediana(std::deque<mokinys> &mok);
 void atsitiktinis(std::deque<mokinys> &mok, int i, int k);
 bool pagal_galutini(const mokinys &a, const mokinys &b);
 bool pagal_pavarde(const mokinys &a, const mokinys &b);
-void spausdinimas(std::deque<mokinys> mok, int ilgvardas, int ilgpavarde);
+void spausdinimas(std::deque<mokinys> &mok, int ilgvardas, int ilgpavarde);
 void failu_generavimas();
 
 #endif

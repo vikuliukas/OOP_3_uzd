@@ -30,7 +30,7 @@ void mediana(std::list<mokinys> &mok);
 void atsitiktinis(std::list<mokinys> &mok, std::list<mokinys>::iterator it, int k);
 bool pagal_galutini(const mokinys &a, const mokinys &b);
 bool pagal_pavarde(const mokinys &a, const mokinys &b);
-void spausdinimas(std::list<mokinys> mok, int ilgvardas, int ilgpavarde, std::list<mokinys> &saunuoliai, std::list<mokinys> &vargsiuka);
+void spausdinimas(std::list<mokinys> &mok, int ilgvardas, int ilgpavarde, std::list<mokinys> &saunuoliai, std::list<mokinys> &vargsiuka);
 void failu_generavimas();
 
 #endif

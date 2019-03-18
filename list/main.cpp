@@ -74,12 +74,7 @@ int main()
 
 	saunuoliai.clear();
 	vargsiukai.clear();
-	for (auto ir = mok.begin(); ir != mok.end(); ir++)
-	{
-		ir->ndrez.clear();
-	}
-	mok.clear();
-
+	
 	std::chrono::duration<double> trukme = pabaiga - pradzia;
 	std::cout << "užtruko " << trukme.count() << " sek.\n";
 	return 0;
