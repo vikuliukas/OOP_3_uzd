@@ -1,7 +1,7 @@
 Testavimo  metu žmogus neįvedinėjo ar nori nuskaityti nuo failo ar pagal kurį parametrą skaičiuoti, viskas buvo nurodyta programos viduje,
 kad testavimas būtų tikslesnis.
 Laikas buvo matuojamas be failo generavimo ar išvedimo į failus(tos vietos buvo užkomentuotos).
-Visais atvejais buvo naudojamas tats pats duomenų failas "kursiokai.txt", kuriame buvo 1000 mokinių su 1000 pažymių.
+Visais atvejais buvo naudojamas tats pats duomenų failas "kursiokai.txt", kuriame buvo 100000 mokinių su 10000 pažymių.
 
 1. Naudojant std::vector.
 
