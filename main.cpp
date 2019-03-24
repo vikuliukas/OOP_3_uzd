@@ -8,7 +8,6 @@ int main()
 
 	int ilgvardas = 10, ilgpavarde = 10, x;
 	setlocale(LC_ALL, "Lithuanian");
-	srand(time(NULL));
 	std::cout<<"Kiek failų norite sugeneruoti? (nuo 0 iki 5)\n";
 	std::cin>>t;
 	while (!std::all_of(t.begin(), t.end(), ::isdigit) || std::stoi(t) < 0 || std::stoi(t) > 5)
