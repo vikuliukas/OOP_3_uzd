@@ -1,46 +1,52 @@
 Testavimo  metu žmogus neįvedinėjo ar nori nuskaityti nuo failo ar pagal kurį parametrą skaičiuoti, viskas buvo nurodyta programos viduje,
 kad testavimas būtų tikslesnis.
-Laikas buvo matuojamas be failo generavimo ar išvedimo į failus(tos vietos buvo užkomentuotos).
-Visais atvejais buvo naudojamas tats pats duomenų failas "kursiokai.txt", kuriame buvo 10000 mokinių su 1000 pažymių.
 
-1. Naudojant std::vector.
+1. Kai mokiniu ir pažymiu skaičius yra 10.
 
     a) Galutinį balą skaičiuoja pagal mediana.
-        bandymas Nr1: 9.28987 sek.
-        bandymas Nr2: 9.26317 sek.
-        bandymas Nr3: 9.21416 sek.
-        Vidurkis: 9.25573 sek.
+        sugeneruoti failą su 10 mokiniu ir pažymiu užtruko: 0.002961 sek.
+        visa programa uztruko 0.0099431 sek.
 
     b) Galutinį balą skaičiuoja pagal vidurkį.
-        bandymas Nr1: 5.77886 sek.
-        bandymas Nr2: 5.88744 sek.
-        bandymas Nr3: 5.74647 sek.
-        Vidurkis: 5.80425 sek.
+        sugeneruoti failą su 10 mokiniu ir pažymiu užtruko: 0.0027045 sek.
+        visa programa uztruko 0.0096285 sek.
 
-2. Naudojant std::deque.
+2. Kai mokiniu ir pažymiu skaičius yra 100.
 
     a) Galutinį balą skaičiuoja pagal mediana.
-        bandymas Nr1: 12.7999 sek.
-        bandymas Nr2: 12.8476 sek.
-        bandymas Nr3: 12.7896 sek.
-        Vidurkis: 12.8123 sek.
+        sugeneruoti failą su 100 mokiniu ir pažymiu užtruko: 0.0081954 sek.
+        visa programa uztruko 0.0203452 sek.
 
     b) Galutinį balą skaičiuoja pagal vidurkį.
-        bandymas Nr1: 8.09137 sek.
-        bandymas Nr2: 7.74398 sek.
-        bandymas Nr3: 7.77999 sek.
-        Vidurkis: 7.87178 sek.
+        sugeneruoti failą su 100 mokiniu ir pažymiu užtruko: 0.0054437 sek.
+        visa programa uztruko 0.0160501 sek.
 
-3. Naudojant std::list.
+3. Kai mokiniu ir pažymiu skaičius yra 1000.
 
     a) Galutinį balą skaičiuoja pagal mediana.
-        bandymas Nr1: 20.9741 sek.
-        bandymas Nr2: 20.7227 sek.
-        bandymas Nr3: 20.7641 sek.
-        Vidurkis: 20.8203 sek.
+        sugeneruoti failą su 1000 mokiniu ir pažymiu užtruko: 0.0929532 sek.
+        visa programa uztruko 0.492777 sek.
 
     b) Galutinį balą skaičiuoja pagal vidurkį.
-        bandymas Nr1: 9.07723 sek.
-        bandymas Nr2: 9.00096 sek.
-        bandymas Nr3: 8.9277 sek.
-        Vidurkis: 9.0019 sek.
+        sugeneruoti failą su 1000 mokiniu ir pažymiu užtruko: 0.0944636 sek.
+        visa programa uztruko 0.364945 sek.
+
+4. Kai mokiniu ir pažymiu skaičius yra 10000.
+
+    a) Galutinį balą skaičiuoja pagal mediana.
+        sugeneruoti failą su 10000 mokiniu ir pažymiu užtruko: 9.07272 sek.
+        visa programa uztruko 52.3877 sek.
+
+    b) Galutinį balą skaičiuoja pagal vidurkį.
+        sugeneruoti failą su 10000 mokiniu ir pažymiu užtruko: 8.98889 sek.
+        visa programa uztruko 32.8594 sek.
+
+5. Kai mokiniu skaičius 100000, o pažymiu skaičius 10000.
+
+    a) Galutinį balą skaičiuoja pagal mediana.
+        sugeneruoti failą su 100000 mokiniu ir pažymiu užtruko: 92.1495 sek.
+        visa programa uztruko 549.591 sek.
+
+    b) Galutinį balą skaičiuoja pagal vidurkį.
+        sugeneruoti failą su 100000 mokiniu ir pažymiu užtruko: 89.9783 sek.
+        visa programa uztruko 481.639 sek.
