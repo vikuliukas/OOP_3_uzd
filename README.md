@@ -1,4 +1,4 @@
-# Duomenu apdorojimas (2 oji užduotis)
+﻿# Duomenu apdorojimas (2 oji užduotis)
 
 ## Idiegimas (Unix kompiuteryje)
 
@@ -8,42 +8,26 @@
 - `./main`
 
 ## Versiju istorija
-# [v0.51](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.51)
-
-**Koreguota**
-
-- Visoms versijoms (std::vector, std::list ir std::deque) pataisytos programos, kad jos ištrintu nereikalinus, ar jau nukopijuotus duomenis.
-- Iš naujo daryti bandymai, kurie surašyti faile bandymai.
 
 # [v0.5](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.5)
 
 ***Prideta***
 
-- Skirtingi aplankalai, kuriose yra skirtingos programos versijos naudojančios std::vector, std::list ir std::deque.
+- Skirtingi aplankalai, kuriose sudėta skirtingos programos versijos naudojančios std::vector, std::list ir std::deque.
 
 **Koreguota**
 
 - Koreguota programos v0.41 versija su skirtingais konteineriais.
-- Failas bandymai dabar saugo testavimÅ³ rezultatus, kurie rodo programos veikimo laikÄ… naudojant skirtingus konteinerius.
+- Failas bandymai dabar saugo testavimų rezultatus, kurie rodo programos veikimo laiką naudojant skirtingus konteinerius.
 - Pataisytas Makefilas.
 - Papildytas README failas.
-
-# [v0.42](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.42)
-
-**Koreguota**
-
-- Vietoje rand() funkcijos naudojamas std::random_device.
-- Ištrinta "atsitiktinis" funcija.
-- Žmogus gali pasirinkti, kad sugeneruotu kelis failus.
-- Rezultatų failuose studentai surikuoti pagal galutinį balą, o ne pagal pavardes.
-- Iš naujo perdaryti bandymai.
 
 # [v0.41](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.41)
 
 **Koreguota**
 
 - Pataysyta versija 0.4. Programa dabar surikuoja studentus pagal galutinius pažymius ir tada nukopijuoja i skirtingus vektorius pagal galutini bala.
-- Perdaryti testai, kuriu rezultatai išsaugoti faile bandymai (programa užtrunka ilgiau skirstydama i skirtingus vektorius nei iš karto rašant i failus).
+- Perdaryti testai, kuriu rezultatai išsaugoti faile bandymai (programa užtrunka dvigubai ilgiau skirstydama i skirtingus vektorius nei iš karto rašant i failus).
 
 # [v0.4](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.4)
 
@@ -51,8 +35,8 @@
 
 - irasymas.cpp ir skaitymas.cpp (skirtingi cpp failai, ka butu lengviau atskirti kas vyksta kai žmogus nori ivesti ar nuskaityti duomenis)
 - Funkcija "failu_generavimas", kuri sukuria faila su atsitiktiniais duomenimis.
-- Programa pradeša jei faile yra per didelis skaicius prie pažymiu ar vietoje skaiciaus yra raide ir kurioje eiluteje yra tokia klaida.
-- Pridetas failas, kuriame buvo atlikta programos veikimo greicio analize (darant analize žmogus ranka nenurodinejo ar nori nuskaityti nuo failo ar pan., tai buvo nurodyta programos viduje, kad skaiciavimai butu tikslesni).
+- Programa praneša jei faile yra per didelis skaicius prie pažymiu ar vietoje skaiciaus yra raide ir kurioje eiluteje yra tokia klaida.
+- Pridetas failas "bandymai", kuriame buvo atlikta programos veikimo greicio analize (darant analize žmogus ranka nenurodinejo ar nori nuskaityti nuo failo ar pan., tai buvo nurodyta programos viduje, kad skaiciavimai butu tikslesni).
 
 **Koreguota**
 
