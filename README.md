@@ -9,6 +9,29 @@
 
 ## Versiju istorija
 
+<<<<<<< HEAD
+=======
+# [v0.51](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.51)
+
+**Koreguota**
+
+- Visoms versijoms (std::vector, std::list ir std::deque) pataisytos programos, kad jos ištrintu nereikalinus, ar jau nukopijuotus duomenis.
+- Iš naujo daryti bandymai, kurie surašyti faile bandymai.
+
+# [v0.5](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.5)
+
+***Prideta***
+
+- Skirtingi aplankalai, kuriose sudėta skirtingos programos versijos naudojančios std::vector, std::list ir std::deque.
+
+**Koreguota**
+
+- Koreguota programos v0.41 versija su skirtingais konteineriais.
+- Failas bandymai dabar saugo testavimų rezultatus, kurie rodo programos veikimo laiką naudojant skirtingus konteinerius.
+- Pataisytas Makefilas.
+- Papildytas README failas.
+
+>>>>>>> d261b668c1e22394f60ca8d2fb4fbf8a2b0eb0ad
 # [v0.41](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.41)
 
 **Koreguota**
