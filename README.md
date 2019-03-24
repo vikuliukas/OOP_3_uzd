@@ -9,6 +9,17 @@
 
 ## Versiju istorija
 
+# [v0.52](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.52)
+
+- Pataisytos visos programos versijos su skirtingais konteineriais pagal 0.42 versiją.
+- Panaudoti duomenys ištrinami.
+
+# [v0.51](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.51)
+
+**Koreguota**
+
+- Pataisyta versija 0.5, kad panaudoti duomenys būtu ištrinti.
+
 # [v0.5](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.5)
 
 ***Prideta***
@@ -22,12 +33,21 @@
 - Pataisytas Makefilas.
 - Papildytas README failas.
 
+# [v0.42](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.42)
+
+**Koreguota**
+
+- Pakeista funkcija rand() į std::random_device.
+- Žmogus gali pasirinkti kiek failų nori sugeneruoti (seniau galėjo tik 1).
+- Ištrintos funcijos atsitiktinis ir pagal_pavarde.
+- Rezultatų faile mokiniai surušiuoti pagal galutinius pažymius (seniau buvo pagal pavardes).
+
 # [v0.41](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.41)
 
 **Koreguota**
 
 - Pataysyta versija 0.4. Programa dabar surikuoja studentus pagal galutinius pažymius ir tada nukopijuoja i skirtingus vektorius pagal galutini bala.
-- Perdaryti testai, kuriu rezultatai išsaugoti faile bandymai (programa užtrunka dvigubai ilgiau skirstydama i skirtingus vektorius nei iš karto rašant i failus).
+- Perdaryti testai, kuriu rezultatai išsaugoti faile bandymai (programa užtrunka ilgiau skirstydama i skirtingus vektorius nei iš karto rašant i failus).
 
 # [v0.4](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.4)
 
