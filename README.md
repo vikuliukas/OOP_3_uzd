@@ -12,14 +12,14 @@
 
 **Koreguota**
 
-- Visoms versijoms (std::vector, std::list ir std::deque) pataisytos programos, kad jos iÅ¡trintu nereikalinus, ar jau nukopijuotus duomenis.
-- IÅ¡ naujo daryti bandymai, kurie suraÅ¡yti faile bandymai.
+- Visoms versijoms (std::vector, std::list ir std::deque) pataisytos programos, kad jos ištrintu nereikalinus, ar jau nukopijuotus duomenis.
+- Iš naujo daryti bandymai, kurie surašyti faile bandymai.
 
 # [v0.5](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.5)
 
 ***Prideta***
 
-- Skirtingi aplankalai, kuriose sudÄ—ta skirtingos programos versijos naudojanÄios std::vector, std::list ir std::deque.
+- Skirtingi aplankalai, kuriose yra skirtingos programos versijos naudojančios std::vector, std::list ir std::deque.
 
 **Koreguota**
 
@@ -36,6 +36,7 @@
 - Ištrinta "atsitiktinis" funcija.
 - Žmogus gali pasirinkti, kad sugeneruotu kelis failus.
 - Rezultatų failuose studentai surikuoti pagal galutinį balą, o ne pagal pavardes.
+- Iš naujo perdaryti bandymai.
 
 # [v0.41](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.41)
 
