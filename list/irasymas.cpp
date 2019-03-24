@@ -89,7 +89,7 @@ void irasimas(std::list<mokinys> &mok, int &ilgvardas, int &ilgpavarde)
 
 int tikrinimas(std::string a)
 {
-	while (!std::all_of(a.begin(), a.end(), ::isdigit) && std::stoi(a) < 0 && std::stoi(a) > 10)
+	while (!std::all_of(a.begin(), a.end(), ::isdigit) || std::stoi(a) < 0 || std::stoi(a) > 10)
 	{
 		std::cin.clear();
 		std::cin.ignore();

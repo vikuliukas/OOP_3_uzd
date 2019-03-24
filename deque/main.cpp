@@ -2,14 +2,13 @@
 
 int main()
 {
-	auto pradzia = std::chrono::high_resolution_clock::now();
 	std::deque<mokinys> mok;
 	std::string t;
 
 	int ilgvardas = 10, ilgpavarde = 10, x;
 	setlocale(LC_ALL, "Lithuanian");
-	std::cout << "Kiek failų norite sugeneruoti? (nuo 0 iki 5)\n";
-	std::cin >> t;
+	std::cout<<"Kiek failų norite sugeneruoti? (nuo 0 iki 5)\n";
+	std::cin>>t;
 	while (!std::all_of(t.begin(), t.end(), ::isdigit) || std::stoi(t) < 0 || std::stoi(t) > 5)
 	{
 		std::cin.clear();
@@ -19,8 +18,7 @@ int main()
 	}
 	int failu_sk = std::stoi(t);
 	//int failu_sk = 1;
-	if (failu_sk != 0)
-	{
+	if(failu_sk != 0){
 		failu_generavimas(failu_sk);
 	}
 	std::cout << "Ar norite duomenis ivesti ar nuskaityti nuo failo? \n";
@@ -66,16 +64,31 @@ int main()
 		std::cin >> t;
 	}
 	//t = "0";
-	if (t == "0")
-	{
+	if(t == "0"){
 		vidurkis(mok);
 	}
-	else
-	{
+	else{
 		mediana(mok);
 	}
 
-	spausdinimas(mok, ilgvardas, ilgpavarde);
+	std::cout << "Pagal 1 ar 2 strategiją vykdyti programą? \n";
+	std::cin >> t;
+	while (t != "1" && t != "2")
+	{
+		std::cin.clear();
+		std::cin.ignore();
+		std::cout << "1 - pagal 1 strategiją, 2 - pagal 2 strategją.\n";
+		std::cin >> t;
+	}
+	//t = "1";
+	auto pradzia = std::chrono::high_resolution_clock::now();
+	if(t == "1"){
+		strategija_1(mok,ilgvardas,ilgpavarde);
+	}
+	else{
+		strategija_2(mok, ilgvardas,ilgpavarde);
+	}
+
 
 	auto pabaiga = std::chrono::high_resolution_clock::now();
 	std::chrono::duration<double> trukme = pabaiga - pradzia;

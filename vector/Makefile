@@ -1,5 +1,5 @@
 CXX = clang++
-CXXFLAGS= -std=c++11 -stdlib=libc++ -Wall -pedantic
+CXXFLAGS= -std=c++17 -stdlib=libc++ -Wall -pedantic
 CC = clang
 
 all: main.o funkcijos.o irasymas.o skaitymas.o

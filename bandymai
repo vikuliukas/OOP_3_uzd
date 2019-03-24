@@ -1,0 +1,40 @@
+Testavimo  metu žmogus neįvedinėjo ar nori nuskaityti nuo failo ar pagal kurį parametrą skaičiuoti, viskas buvo nurodyta programos viduje,
+kad testavimas būtų tikslesnis.
+Laikas buvo matuojamas tik stategijos 1 ar 2 metu, tad galutinio balo skaiciavimas ar duomenų skaitymas į tą laiką neįėjo.
+Visais atvejais buvo naudojamas tats pats duomenų failas "kursiokai.txt", kuriame buvo 100000 mokinių su 100 pažymių.
+
+1. Naudojant std::vector.
+
+    a) Pagal 1 strategiją:
+        bandymas Nr1: 0.667925 sek.
+        bandymas Nr2: 0.743837 sek.
+        bandymas Nr3: 0.662364 sek.
+
+    b) Pagal 2 strategiją:
+        bandymas Nr1: 0.69041 sek.
+        bandymas Nr2: 0.694428 sek.
+        bandymas Nr3: 0.622466 sek.
+
+2. Naudojant std::deque.
+
+    a) Pagal 1 strategiją:
+        bandymas Nr1: 1.58946 sek.
+        bandymas Nr2: 1.47239 sek.
+        bandymas Nr3: 1.58762 sek.
+
+    b) Pagal 2 strategiją:
+        bandymas Nr1: 1.23089 sek.
+        bandymas Nr2: 1.23947 sek.
+        bandymas Nr3: 1.3466 sek.
+
+3. Naudojant std::list.
+
+    a) Pagal 1 strategiją:
+        bandymas Nr1: 0.655442 sek.
+        bandymas Nr2: 0.649 sek.
+        bandymas Nr3: 0.651007 sek.
+
+    b) Pagal 2 strategiją:
+        bandymas Nr1: 0.635396 sek.
+        bandymas Nr2: 0.628496 sek.
+        bandymas Nr3: 0.620307 sek.

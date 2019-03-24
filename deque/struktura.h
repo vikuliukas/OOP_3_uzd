@@ -29,7 +29,8 @@ int tikrinimas(std::string a);
 void vidurkis(std::deque<mokinys> &mok);
 void mediana(std::deque<mokinys> &mok);
 bool pagal_galutini(const mokinys &a, const mokinys &b);
-void spausdinimas(std::deque<mokinys> &mok, int ilgvardas, int ilgpavarde);
+void strategija_1(std::deque<mokinys> &mok, int ilgvardas, int ilgpavarde);
+void strategija_2(std::deque<mokinys> &mok, int ilgvardas, int ilgpavarde);
 void failu_generavimas(int &failu_sk);
 
 #endif

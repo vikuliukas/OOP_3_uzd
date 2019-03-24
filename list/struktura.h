@@ -29,7 +29,8 @@ int tikrinimas(std::string a);
 void vidurkis(std::list<mokinys> &mok);
 void mediana(std::list<mokinys> &mok);
 bool pagal_galutini(const mokinys &a, const mokinys &b);
-void spausdinimas(std::list<mokinys> &mok, int ilgvardas, int ilgpavarde);
+void strategija_1(std::list<mokinys> &mok, int ilgvardas, int ilgpavarde);
+void strategija_2(std::list<mokinys> &mok, int ilgvardas, int ilgpavarde);
 void failu_generavimas(int &failu_sk);
 
 #endif

@@ -64,7 +64,7 @@ void failu_generavimas(int &failu_sk)
 		}
 		N = std::stoi(t);
 		//N = 100000;
-		M = N;
+		M = 100;
 		a = a + "0";
 		std::ofstream r("kursiokai" + a + ".txt");
 		auto pradzia = std::chrono::high_resolution_clock::now();

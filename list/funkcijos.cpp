@@ -12,7 +12,7 @@ void vidurkis(std::list<mokinys> &mok)
 		{
 			it->vid = std::accumulate(it->ndrez.begin(), it->ndrez.end(), 0.0) / it->ndrez.size();
 		}
-		it->galutinis = 0.40 * it->vid + 0.60 * it->egzaminorez;
+		it->galutinis = round((0.40 * it->vid + 0.60 * it->egzaminorez)*100)/100;
 		it->ndrez.clear();
 	}
 }
@@ -42,7 +42,7 @@ void mediana(std::list<mokinys> &mok)
 				it->med = *it1;
 			}
 		}
-		it->galutinis = (double)0.4 * it->med + 0.6 * it->egzaminorez;
+		it->galutinis = round((0.40 * it->med + 0.60 * it->egzaminorez)*100)/100;
 		it->ndrez.clear();
 	}
 }
@@ -52,7 +52,7 @@ bool pagal_galutini(const mokinys &a, const mokinys &b)
 	return a.galutinis > b.galutinis;
 }
 
-void spausdinimas(std::list<mokinys> &mok, int ilgvardas, int ilgpavarde)
+void strategija_1(std::list<mokinys> &mok, int ilgvardas, int ilgpavarde)
 {
 	mok.sort(pagal_galutini);
 
@@ -78,6 +78,41 @@ void spausdinimas(std::list<mokinys> &mok, int ilgvardas, int ilgpavarde)
 	}
 	s.close();
 	saunuoliai.clear();
+
+	std::ofstream v("vargšiukai.txt");
+	for (auto it1 = vargsiukai.begin(); it1 != vargsiukai.end(); it1++)
+	{
+		v << std::left << std::setw(ilgpavarde + 1) << it1->pavarde << std::left << std::setw(ilgvardas + 1) << it1->vardas;
+		v << std::left << std::setw(20) << std::fixed << std::setprecision(2) << it1->galutinis << "\r\n";
+	}
+	v.close();
+	vargsiukai.clear();
+}
+
+void strategija_2(std::list<mokinys> &mok, int ilgvardas, int ilgpavarde)
+{
+	mok.sort(pagal_galutini);
+
+	auto it = mok.begin();
+	int i = 0;
+
+	while (it->galutinis >= 5)
+	{
+		i++;
+		it++;
+	}
+	std::list<mokinys> vargsiukai;
+	vargsiukai.assign(std::next(mok.begin(), i), mok.end());
+	mok.resize(i);
+
+	std::ofstream s("šaunuoliai.txt");
+	for (auto it = mok.begin(); it != mok.end(); it++)
+	{
+		s << std::left << std::setw(ilgpavarde + 1) << it->pavarde << std::left << std::setw(ilgvardas + 1) << it->vardas;
+		s << std::left << std::setw(20) << std::fixed << std::setprecision(2) << it->galutinis << "\r\n";
+	}
+	s.close();
+	mok.clear();
 
 	std::ofstream v("vargšiukai.txt");
 	for (auto it1 = vargsiukai.begin(); it1 != vargsiukai.end(); it1++)
