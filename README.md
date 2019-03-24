@@ -1,13 +1,25 @@
 ﻿# Duomenu apdorojimas (2 oji užduotis)
 
-## Idiegimas (Unix kompiuteryje)
+## Idiegimas (Unix kompiuteryje) naudojant clang kompiliatorių.
 
-- `https://github.com/vikuliukas/OOP_2_uzd.git`
+- `git clone https://github.com/vikuliukas/OOP_2_uzd.git`
 - `cd OOP_2_uzd`
 - `make`
 - `./main`
 
 ## Versiju istorija
+
+# [v1.0](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v1.0)
+
+***Prideta***
+
+- Pridėta funkcija strategija_2.
+
+**Koreguota**
+
+- Fukcijos skaitymas pavadinimas pakeistas į strategija_1.
+- Funkcijose vidurkis ir mediana galutiniam balui skaičiuoti pridėta round funcija (nes jei galutinis balas 4,9999 tada jis nepatenka į šaunuolius, tačiau output yra 5,00 nes suapvalina funkcija std::setprecision).
+- Padaryti bandymai su skirtingomis strategijomis, tačiau laikas nelabai skiriasi, nes programoje abiem atvejais surikiuoja galutiniu balus ir tik tada juos perkialia į skirtingus konteinerius.
 
 # [v0.52](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v0.52)
 
