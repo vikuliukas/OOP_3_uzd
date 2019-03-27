@@ -4,6 +4,7 @@
 
 - `git clone https://github.com/vikuliukas/OOP_2_uzd.git`
 - `cd OOP_2_uzd`
+- `cd vector/deque arba list`
 - `make`
 - `./main`
 
