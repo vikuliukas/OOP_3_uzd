@@ -12,7 +12,7 @@ void vidurkis(std::deque<mokinys> &mok)
 		{
 			mok[i].vid = accumulate(mok[i].ndrez.begin(), mok[i].ndrez.end(), 0.0) / mok[i].ndrez.size();
 		}
-		mok[i].galutinis = round((0.40 * mok[i].vid + 0.60 * mok[i].egzaminorez)*100)/100;
+		mok[i].galutinis = round((0.40 * mok[i].vid + 0.60 * mok[i].egzaminorez) * 100) / 100;
 		mok[i].ndrez.clear();
 	}
 }
@@ -37,7 +37,7 @@ void mediana(std::deque<mokinys> &mok)
 				mok[i].med = (double)mok[i].ndrez[mok[i].ndrez.size() / 2];
 			}
 		}
-		mok[i].galutinis = round((0.40 * mok[i].med + 0.60 * mok[i].egzaminorez)*100)/100;
+		mok[i].galutinis = round((0.40 * mok[i].med + 0.60 * mok[i].egzaminorez) * 100) / 100;
 		mok[i].ndrez.clear();
 	}
 }
@@ -47,50 +47,46 @@ bool pagal_galutini(const mokinys &a, const mokinys &b)
 	return a.galutinis > b.galutinis;
 }
 
-void strategija_1(std::deque<mokinys> &mok, int ilgvardas, int ilgpavarde)
+void iterpkKietus(std::deque<mokinys> &mok, std::deque<mokinys> &vargsiukai)
 {
-	std::sort(mok.begin(), mok.end(), pagal_galutini);
-	int i;
-	while (mok[i].galutinis >= 5)
+	std::deque<mokinys>::size_type i = 0;
+	mokinys t;
+	int n;
+	while (i != mok.size())
 	{
+		if (mok[i].galutinis < 5)
+		{
+			vargsiukai.push_back(mok[i]);
+		}
+		else
+		{
+			n++;
+			mok.push_front(mok[i]);
+			i++;
+		}
 		i++;
 	}
-
-	std::deque<mokinys> saunuoliai;
-	std::deque<mokinys> vargsiukai;
-	saunuoliai.assign(mok.begin(), mok.begin() + i);
-	vargsiukai.assign(mok.begin() + i, mok.end());
-	mok.clear();
-
-	std::ofstream s("šaunuoliai.txt");
-	for (int i = 0; i < saunuoliai.size(); i++)
-	{
-		s << std::left << std::setw(ilgpavarde + 1) << saunuoliai[i].pavarde << std::left << std::setw(ilgvardas + 1) << saunuoliai[i].vardas;
-		s << std::left << std::setw(20) << std::fixed << std::setprecision(2) << saunuoliai[i].galutinis << "\r\n";
-	}
-	s.close();
-	std::ofstream v("vargšiukai.txt");
-	for (int i = 0; i < vargsiukai.size(); i++)
-	{
-		v << std::left << std::setw(ilgpavarde + 1) << vargsiukai[i].pavarde << std::left << std::setw(ilgvardas + 1) << vargsiukai[i].vardas;
-		v << std::left << std::setw(20) << std::fixed << std::setprecision(2) << vargsiukai[i].galutinis << "\r\n";
-	}
-	v.close();
+	mok.resize(n);
+	mok.shrink_to_fit();
 }
 
-void strategija_2(std::deque<mokinys> &mok, int ilgvardas, int ilgpavarde)
+void raskMinkstus(std::deque<mokinys> &mok, std::deque<mokinys> &vargsiukai)
 {
-	std::sort(mok.begin(), mok.end(), pagal_galutini);
-	int i;
-	while (mok[i].galutinis >= 5)
+	std::deque<mokinys>::size_type i = 0;
+	while (i != mok.size())
 	{
+		if (mok[i].galutinis < 5)
+		{
+			vargsiukai.push_back(mok[i]);
+			mok.erase(mok.begin() + i);
+		}
+		else
 		i++;
 	}
+}
 
-	std::deque<mokinys> vargsiukai;
-	vargsiukai.assign(mok.begin() + i, mok.end());
-	mok.resize(i);
-
+void spausdinimas(std::deque<mokinys> &vargsiukai, std::deque<mokinys> &mok, int ilgvardas, int ilgpavarde)
+{
 	std::ofstream s("šaunuoliai.txt");
 	for (int i = 0; i < mok.size(); i++)
 	{

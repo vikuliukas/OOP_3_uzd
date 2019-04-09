@@ -24,13 +24,14 @@ struct mokinys
 };
 
 void irasimas(std::deque<mokinys> &mok, int &ilgvardas, int &ilgpavarde);
-void skaitymas(std::deque<mokinys> &mok, int &ilgvardas, int &ilgpavarde);
+void skaitymas(std::string failo_pav, std::deque<mokinys> &mok, int &ilgvardas, int &ilgpavarde);
 int tikrinimas(std::string a);
 void vidurkis(std::deque<mokinys> &mok);
 void mediana(std::deque<mokinys> &mok);
 bool pagal_galutini(const mokinys &a, const mokinys &b);
-void strategija_1(std::deque<mokinys> &mok, int ilgvardas, int ilgpavarde);
-void strategija_2(std::deque<mokinys> &mok, int ilgvardas, int ilgpavarde);
+void spausdinimas(std::deque<mokinys> &vargsiukai, std::deque<mokinys> &saunuoliai, int ilgvardas, int ilgpavarde);
 void failu_generavimas(int &failu_sk);
+void raskMinkstus(std::deque<mokinys> &mok, std::deque<mokinys> &vargsiukai);
+void iterpkKietus(std::deque<mokinys> &mok, std::deque<mokinys> &vargsiukai);
 
 #endif

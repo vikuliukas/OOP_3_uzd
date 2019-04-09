@@ -21,4 +21,4 @@ test:	all
 	./main
 
 clean:
-	rm -f *.o main vargšiukai.txt šaunuoliai.txt kursiokai*.txt
+	rm -f *.o main vargšiukai.txt šaunuoliai.txt

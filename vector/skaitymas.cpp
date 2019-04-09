@@ -1,8 +1,8 @@
 ﻿#include "struktura.h"
 
-void skaitymas(std::vector<mokinys> &mok, int &ilgvardas, int &ilgpavarde)
+void skaitymas(std::string failo_pav, std::vector<mokinys> &mok, int &ilgvardas, int &ilgpavarde)
 {
-	std::ifstream d("kursiokai10.txt");
+	std::ifstream d(failo_pav);
 	std::string t, t1;
 	int i = 0, n;
 	if (d.fail())
@@ -47,12 +47,12 @@ void failu_generavimas(int &failu_sk)
 	std::uniform_int_distribution<int> uni(0, 10);
 
 	int failo_numeris = 0, N, M;
-	std::string t, a = "1";
+	std::string t;
 	while (failo_numeris < failu_sk)
 	{
-		std::cout << "kiek įrašų " << failo_numeris + 1 << " faile?\n";
+		std::cout << "kiek studentų " << failo_numeris + 1 << " faile?\n";
 		std::cin >> t;
-		while (!std::all_of(a.begin(), a.end(), ::isdigit) || std::stoi(t) <= 0)
+		while (!std::all_of(t.begin(), t.end(), ::isdigit) || std::stoi(t) <= 0)
 		{
 			std::cin.clear();
 			std::cin.ignore();
@@ -61,9 +61,17 @@ void failu_generavimas(int &failu_sk)
 		}
 		N = std::stoi(t);
 		//N = 100000;
-		M = 100;
-		a = a + "0";
-		std::ofstream r("kursiokai" + a + ".txt");
+		std::cout << "kiek pažymių turi vienas studentas? \n";
+		std::cin >> t;
+		while (!std::all_of(t.begin(), t.end(), ::isdigit) || std::stoi(t) <= 0)
+		{
+			std::cin.clear();
+			std::cin.ignore();
+			std::cout << "Įveskite skaičių didesni uz 0";
+			std::cin >> t;
+		}
+		M = std::stoi(t);
+		std::ofstream r("kursiokai" + std::to_string(failo_numeris+1) + ".txt");
 		auto pradzia = std::chrono::high_resolution_clock::now();
 		for (int i = 0; i < N; i++)
 		{
@@ -81,7 +89,7 @@ void failu_generavimas(int &failu_sk)
 		r.close();
 		auto pabaiga = std::chrono::high_resolution_clock::now();
 		std::chrono::duration<double> trukme = pabaiga - pradzia;
-		std::cout << "sugeneruoti failą su " << N << " mokiniu ir pažymiu užtruko: " << trukme.count() << " sek.\n";
+		std::cout << "failas kursiokai" << failo_numeris+1 << ".txt sugeneruotas per " << trukme.count() << "sek.\n";
 		failo_numeris++;
 	}
 }
