@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿# Duomenu apdorojimas (2 oji užduotis)
 
 #Papildoma užduotis
@@ -146,3 +147,6 @@ Išvados:
 ***Prideta***
 
 - Pirmine programos versija.
+=======
+# OOP_3_uzd
+>>>>>>> aa8b999f6fc8045378d5bc507e83dde8ca27591d
