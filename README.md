@@ -1,7 +1,62 @@
-<<<<<<< HEAD
-﻿# Duomenu apdorojimas (2 oji užduotis)
+﻿﻿# Duomenu apdorojimas (2 oji užduotis)
+
+## Idiegimas (Unix kompiuteryje) naudojant clang kompiliatorių.
+
+- `git clone https://github.com/vikuliukas/OOP_3_uzd.git`
+- `cd OOP_3_uzd`
+- `make`
+- `./main`
+
+## Instrukcijos
+
+- Pasirinkite kiek failų norite sugeneruoti, jei to daryti nenorite įveskite 0.
+- Pasirinkite ar norite duomenis nuskaityti nuo failo ar suvesti ranka (suvedimui ranka įveskite 0, nuskaitimui nuo failo įveskite 1).
+- Jei duomenis vedate ranka, nustoti vesti duomenis galite vietoje studento vardo įvedę 0.
+- Jei duomenis skaitote nuo failo, tada įveskite failo pavadinimą (pvz. kursiokai1).
+- Pasirinkite ar galutinį balą skaičiuoti pagal vidurį ar medianą (įveskite 0 - pagal visdurki, 1 - pagal mediana).
+
+## Versiju istorija
+
+# [v1.1](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v1.1)
+
+- Palyginimas tarp struct ir class:
+
+    Naudojant struct:
+       ` Kai studentų skaičius 1000, visa programa užtruko 0.520879 sek.`
+       ` Kai studentų skaičius 10000, visa programa užtruko 5.03412 sek.`
+       ` Kai studentų skaičius 100000, visa programa užtruko 50.4217 sek.`
+
+    Naudojant class:
+       ` Kai studentų skaičius 1000, visa programa užtruko 0.536229 sek.`
+       ` Kai studentų skaičius 10000, visa programa užtruko 5.35838 sek.`
+       ` Kai studentų skaičius 100000, visa programa užtruko 52.5402 sek.`
+
+- Palyginimas tarp skirtinų optimizacijų:
+
+    Nenaudonat optimizacijos:
+       ` Kai studentų skaičius 10000, visa programa užtruko  5.38348 sek. `
+       ` Kai studentų skaičius 100000, visa programa užtruko 52.9167 sek. `
+
+    -O1 :
+       ` Kai studentų skaičius 10000, visa programa užtruko 4.12694 sek. `
+       ` Kai studentų skaičius 100000, visa programa užtruko  40.2847 sek. `
+
+    -O2 :
+       ` Kai studentų skaičius 10000, visa programa užtruko 1.9451 sek. `
+       ` Kai studentų skaičius 100000, visa programa užtruko 18.7614 sek. `
+
+    -O3 :
+       ` Kai studentų skaičius 10000, visa programa užtruko 2.00216 sek. `
+       ` Kai studentų skaičius 100000, visa programa užtruko 19.1879 sek. `
+    
+**Koreguota**
+
+- Iš struct pakeista į class.
+- Pakoreguotos funkcijos, kad veiktu ir su class.
 
 #Papildoma užduotis
+# [p1.0](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/p1.0)
+
 Papilodmos užduoties įdiegimas (Unix kompiuteryje) naudojant clang kompiliatorių.
 - `git clone https://github.com/vikuliukas/OOP_2_uzd.git`
 - `cd OOP_2_uzd`
@@ -21,20 +76,6 @@ Išvados:
 - Jei naudojate std::vector, tada funkcija raskMinkstus() yra efektivesnė nei funkcija iterpkKietus().
 - Jei naudojate std::deque, tada funkcija iterpkKietus() yra efektivesnė nei funkcija raskMinkstus().
 - Jeigu jums reikia įterpti duomenis į konteinerio pradžią, tada std::deque turi funkciją, kuri yra skirta būtent tam.
-
-
-## Idiegimas (Unix kompiuteryje) naudojant clang kompiliatorių.
-
-- `git clone https://github.com/vikuliukas/OOP_2_uzd.git`
-- `cd OOP_2_uzd`
-- `cd vector/deque/list`
-- `make`
-- `./main`
-
-## Versiju istorija
-
-#Papildoma užduotis
-# [p1.0](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/p1.0)
 
 ***Prideta***
 
@@ -147,6 +188,3 @@ Išvados:
 ***Prideta***
 
 - Pirmine programos versija.
-=======
-# OOP_3_uzd
->>>>>>> aa8b999f6fc8045378d5bc507e83dde8ca27591d
