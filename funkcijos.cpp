@@ -3,7 +3,7 @@
 void vidurkis(std::vector<studentas> &stud)
 {	
 	double vid;
-	for (int i = 0; i < stud.size(); i++)
+	for (std::size_t i = 0; i < stud.size(); i++)
 	{
 		if (stud[i].ndrez_ar_tuscias())
 		{
@@ -21,7 +21,7 @@ void vidurkis(std::vector<studentas> &stud)
 void mediana(std::vector<studentas> &stud)
 {
 	double med;
-	for (int i = 0; i < stud.size(); i++)
+	for (std::size_t i = 0; i < stud.size(); i++)
 	{
 		if (stud[i].ndrez_ar_tuscias())
 		{
@@ -44,15 +44,10 @@ void mediana(std::vector<studentas> &stud)
 	}
 }
 
-bool pagal_galutini(const studentas &a, const studentas &b)
+void spausdinimas(std::vector<studentas> &stud, std::size_t ilgvardas, std::size_t ilgpavarde)
 {
-	return a.getGalutinis() > b.getGalutinis();
-}
-
-void spausdinimas(std::vector<studentas> &stud, int ilgvardas, int ilgpavarde)
-{
-	std::sort(stud.begin(), stud.end(), pagal_galutini);
-	int i = 0;
+	std::sort(stud.begin(), stud.end(), operator>);
+	std::size_t i = 0;
 	while ((stud[i].getGalutinis() >= 5) && ( i <= stud.size())) 
 	{
 		i++;
@@ -66,17 +61,21 @@ void spausdinimas(std::vector<studentas> &stud, int ilgvardas, int ilgpavarde)
 	stud.shrink_to_fit();
 
 	std::ofstream s("šaunuoliai.txt");
-	for (int i = 0; i < saunuoliai.size(); i++)
+	for (std::size_t i = 0; i < saunuoliai.size(); i++)
 	{
 		s << std::left << std::setw(ilgpavarde + 1) << saunuoliai[i].getPavarde() << std::left << std::setw(ilgvardas + 1) << saunuoliai[i].getVardas();
 		s << std::left << std::setw(20) << std::fixed << std::setprecision(2) << saunuoliai[i].getGalutinis() << "\r\n";
 	}
 	s.close();
 	std::ofstream v("vargšiukai.txt");
-	for (int i = 0; i < vargsiukai.size(); i++)
+	for (std::size_t i = 0; i < vargsiukai.size(); i++)
 	{
 		v << std::left << std::setw(ilgpavarde + 1) << vargsiukai[i].getPavarde() << std::left << std::setw(ilgvardas + 1) << vargsiukai[i].getVardas();
 		v << std::left << std::setw(20) << std::fixed << std::setprecision(2) << vargsiukai[i].getGalutinis() << "\r\n";
 	}
 	v.close();
+	saunuoliai.clear();
+	saunuoliai.shrink_to_fit();
+	vargsiukai.clear();
+	vargsiukai.shrink_to_fit();
 } 

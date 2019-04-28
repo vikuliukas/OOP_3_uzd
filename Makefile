@@ -1,13 +1,15 @@
-
+#CXX = clang++
 CXXFLAGS=  -Wall -g
+#CC = clang
 
-
-all: main.o funkcijos.o irasymas.o skaitymas.o
-	main.o funkcijos.o irasymas.o skaitymas.o -o main
+all: main.o funkcijos.o operatoriai.o irasymas.o skaitymas.o
+	g++  main.o funkcijos.o operatoriai.o irasymas.o skaitymas.o -o main
 
 main.o: main.cpp
 
 funkcijos.o: funkcijos.cpp
+
+operatoriai.o: operatoriai.cpp
 
 irasymas.o: irasymas.cpp
 

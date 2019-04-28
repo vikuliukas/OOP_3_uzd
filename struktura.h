@@ -44,16 +44,21 @@ class studentas
 
 	studentas() { vardas_ = ""; pavarde_ = ""; ndrez_ = {}; egzaminorez_ = 0; galutinis_ = 0;};
 	~studentas() {};
-
 };
 
-void irasimas(std::vector<studentas> &stud, int &ilgvardas, int &ilgpavarde);
-void skaitymas(std::string failo_pav, std::vector<studentas> &stud, int &ilgvardas, int &ilgpavarde);
+bool operator > (const studentas &a, const studentas &b);
+bool operator >= (const studentas &a, const studentas &b);
+bool operator < (const studentas &a, const studentas &b);
+bool operator <= (const studentas &a, const studentas &b);
+bool operator == (const studentas &a, const studentas &b);
+bool operator != (const studentas &a, const studentas &b);
+
+void irasimas(std::vector<studentas> &stud, std::size_t &ilgvardas, std::size_t &ilgpavarde);
+void skaitymas(std::string failo_pav, std::vector<studentas> &stud, std::size_t &ilgvardas, std::size_t &ilgpavarde);
 int tikrinimas(std::string a);
 void vidurkis(std::vector<studentas> &stud);
 void mediana(std::vector<studentas> &stud);
-bool pagal_galutini(const studentas &a, const studentas &b);
-void spausdinimas(std::vector<studentas> &stud, int ilgvardas, int ilgpavarde);
+void spausdinimas(std::vector<studentas> &stud, std::size_t ilgvardas, std::size_t ilgpavarde);
 void failu_generavimas(int &failu_sk);
 
 #endif

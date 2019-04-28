@@ -1,6 +1,6 @@
 ﻿#include "struktura.h"
 
-void irasimas(std::vector<studentas> &stud, int &ilgvardas, int &ilgpavarde)
+void irasimas(std::vector<studentas> &stud, std::size_t &ilgvardas, std::size_t &ilgpavarde)
 {
 	int b;
 	std::string v, p, t, t1;

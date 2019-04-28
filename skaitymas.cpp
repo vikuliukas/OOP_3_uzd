@@ -1,6 +1,6 @@
 ﻿#include "struktura.h"
 
-void skaitymas(std::string failo_pav, std::vector<studentas> &stud, int &ilgvardas, int &ilgpavarde)
+void skaitymas(std::string failo_pav, std::vector<studentas> &stud, std::size_t &ilgvardas, std::size_t &ilgpavarde)
 {
 	std::ifstream d(failo_pav);
 	std::string t, t1 , v, p;

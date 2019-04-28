@@ -17,50 +17,57 @@
 
 ## Versiju istorija
 
+# [v1.2](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v1.2)
+
+***Prideta***
+
+- Pridėti operatoriai >,>=,<,<=,==,=!;
+- Pridėtas failas operatoriai.cpp, kur bus sudėtos visos mano sukurtų operatorių funkcijos.
+
+**Koreguota**
+
+- Panaikinta funkcija Pagal_Galutini, vietoje jos naudojamas naujas operatorius >;
+- Pakoreguotas makefile, jame priddėtas failas operatoriai.cpp.
+- Koreguotas ReadMe failas.
+
 # [v1.1](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v1.1)
 
 - Palyginimas tarp struct ir class:
 
     Naudojant struct:
-    
-      -` Kai studentų skaičius 1000, visa programa užtruko 0.520879 sek.`
-      -` Kai studentų skaičius 10000, visa programa užtruko 5.03412 sek.`
-      -` Kai studentų skaičius 100000, visa programa užtruko 50.4217 sek.`
+       ` Kai studentų skaičius 1000, visa programa užtruko 0.520879 sek.`
+       ` Kai studentų skaičius 10000, visa programa užtruko 5.03412 sek.`
+       ` Kai studentų skaičius 100000, visa programa užtruko 50.4217 sek.`
 
     Naudojant class:
-    
-      -` Kai studentų skaičius 1000, visa programa užtruko 0.536229 sek.`
-      -` Kai studentų skaičius 10000, visa programa užtruko 5.35838 sek.`
-      -` Kai studentų skaičius 100000, visa programa užtruko 52.5402 sek.`
+       ` Kai studentų skaičius 1000, visa programa užtruko 0.536229 sek.`
+       ` Kai studentų skaičius 10000, visa programa užtruko 5.35838 sek.`
+       ` Kai studentų skaičius 100000, visa programa užtruko 52.5402 sek.`
 
 - Palyginimas tarp skirtinų optimizacijų:
 
     Nenaudonat optimizacijos:
-    
-      -` Kai studentų skaičius 10000, visa programa užtruko  5.38348 sek. `
-      -` Kai studentų skaičius 100000, visa programa užtruko 52.9167 sek. `
+       ` Kai studentų skaičius 10000, visa programa užtruko  5.38348 sek. `
+       ` Kai studentų skaičius 100000, visa programa užtruko 52.9167 sek. `
 
     -O1 :
-    
-      -` Kai studentų skaičius 10000, visa programa užtruko 4.12694 sek. `
-      -` Kai studentų skaičius 100000, visa programa užtruko  40.2847 sek. `
+       ` Kai studentų skaičius 10000, visa programa užtruko 4.12694 sek. `
+       ` Kai studentų skaičius 100000, visa programa užtruko  40.2847 sek. `
 
     -O2 :
-    
-      -` Kai studentų skaičius 10000, visa programa užtruko 1.9451 sek. `
-      -` Kai studentų skaičius 100000, visa programa užtruko 18.7614 sek. `
+       ` Kai studentų skaičius 10000, visa programa užtruko 1.9451 sek. `
+       ` Kai studentų skaičius 100000, visa programa užtruko 18.7614 sek. `
 
     -O3 :
-    
-      -` Kai studentų skaičius 10000, visa programa užtruko 2.00216 sek. `
-      -` Kai studentų skaičius 100000, visa programa užtruko 19.1879 sek. `
+       ` Kai studentų skaičius 10000, visa programa užtruko 2.00216 sek. `
+       ` Kai studentų skaičius 100000, visa programa užtruko 19.1879 sek. `
     
 **Koreguota**
 
 - Iš struct pakeista į class.
 - Pakoreguotos funkcijos, kad veiktu ir su class.
 
-# Papildoma užduotis
+#Papildoma užduotis
 # [p1.0](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/p1.0)
 
 Papilodmos užduoties įdiegimas (Unix kompiuteryje) naudojant clang kompiliatorių.

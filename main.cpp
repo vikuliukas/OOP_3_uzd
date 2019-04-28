@@ -5,7 +5,7 @@ int main()
 	auto pradzia = std::chrono::high_resolution_clock::now();
 	std::vector<studentas> stud;
 	std::string t;
-	int ilgvardas = 10, ilgpavarde = 10;
+	std::size_t ilgvardas = 10, ilgpavarde = 10;
 	setlocale(LC_ALL, "Lithuanian");
 	std::cout<<"Kiek failų norite sugeneruoti? (nuo 0 iki 5)\n";
 	std::cin>>t;
