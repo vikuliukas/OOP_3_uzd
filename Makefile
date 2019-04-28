@@ -1,9 +1,9 @@
-CXX = clang++
+
 CXXFLAGS=  -Wall -g
-CC = clang
+
 
 all: main.o funkcijos.o irasymas.o skaitymas.o
-	clang++  main.o funkcijos.o irasymas.o skaitymas.o -o main
+	main.o funkcijos.o irasymas.o skaitymas.o -o main
 
 main.o: main.cpp
 
