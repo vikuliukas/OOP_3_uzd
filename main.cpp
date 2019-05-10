@@ -7,6 +7,8 @@ int main()
 	std::string t;
 	std::size_t ilgvardas = 10, ilgpavarde = 10;
 	setlocale(LC_ALL, "Lithuanian");
+
+	//*Failų generavimas*
 	std::cout<<"Kiek failų norite sugeneruoti? (nuo 0 iki 5)\n";
 	std::cin>>t;
 	while (!std::all_of(t.begin(), t.end(), ::isdigit) || std::stoi(t) < 0 || std::stoi(t) > 5)
@@ -21,6 +23,8 @@ int main()
 	if(failu_sk != 0){
 		failu_generavimas(failu_sk);
 	}
+
+	//*Duomenų įrašymas arba skaitymas iš failo*
 	std::cout << "Ar norite duomenis ivesti ar nuskaityti nuo failo? \n";
 	std::cout << "jei norite įvesti duomenis tada rašykite 0, jei skaityti - 1 \n";
 	std::cin >> t;
@@ -41,7 +45,7 @@ int main()
 		std::string failo_pav;
 		std::cout<<"Įveskite failo pavadinimą iš kurio norite nuskaityti duomenis. (pvz. kursiokai1)\n";
 		std::cin>>failo_pav;
-		//failo_pav = "kursiokai3";
+		//failo_pav = "kursiokai1";
 		failo_pav += ".txt";
 		try
 		{
@@ -59,6 +63,7 @@ int main()
 		}
 	}
 
+	//*Galutinio balo skaičiavimas*
 	std::cout << "jei galutini bala skaiciuoti pagal vidurki rasykite 0, jei pagal mediana - 1 \n";
 	std::cin >> t;
 	while (t != "0" && t != "1")
@@ -75,7 +80,8 @@ int main()
 	else{
 		mediana(stud);
 	}
-
+	
+	//*Rezultato išvedimas*
 	spausdinimas(stud, ilgvardas, ilgpavarde);
 	
 	auto pabaiga = std::chrono::high_resolution_clock::now();

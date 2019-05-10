@@ -17,6 +17,12 @@
 
 ## Versiju istorija
 
+# [v1.21](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v1.21)
+
+***Prideta***
+
+- Pridėtas friend operatorius <<.
+
 # [v1.2](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v1.2)
 
 ***Prideta***

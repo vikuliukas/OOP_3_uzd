@@ -42,8 +42,11 @@ class studentas
 	double getEgzaminorez () const { return egzaminorez_; };
 	double getGalutinis () const { return galutinis_; };
 
+	friend std::ofstream & operator << (std::ofstream & os, studentas & a);
+
 	studentas() { vardas_ = ""; pavarde_ = ""; ndrez_ = {}; egzaminorez_ = 0; galutinis_ = 0;};
 	~studentas() {};
+
 };
 
 bool operator > (const studentas &a, const studentas &b);
