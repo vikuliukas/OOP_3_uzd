@@ -15,17 +15,27 @@
 #include <numeric>
 #include <iterator>
 
-class studentas
+class zmogus
 {
-	private:
+	protected:
 	std::string vardas_, pavarde_;
-	std::vector<double> ndrez_;
-	double egzaminorez_;
-	double galutinis_;
+	zmogus( std::string vardas = "", std::string pavarde = "") : vardas_{vardas}, pavarde_{pavarde} {}
 
 	public:
-	void vardas ( std::string v ) { vardas_ = v; };
-	void pavarde ( std::string p ) { pavarde_ = p; };
+	void vardas ( std::string vardas) { vardas_ = vardas; }
+	void pavarde (std::string pavarde) { pavarde_ = pavarde; }
+	std::string getVardas () const { return vardas_; }
+	std::string getPavarde () const { return pavarde_; }
+
+};
+
+class studentas : public zmogus
+{
+	private:
+	std::vector<double> ndrez_;
+	double egzaminorez_, galutinis_;
+
+	public:
 	void ndrez ( double n ) { ndrez_.push_back(n); };
 	void ndrez_panaikinti_paskutini () { ndrez_.pop_back();};
 	void ndrez_isrikiuoti () { std::sort( ndrez_.begin(), ndrez_.end()); };
@@ -33,8 +43,6 @@ class studentas
 	void egzaminorez ( double n ) { egzaminorez_ = n; }
 	void galutinis (double n) { galutinis_ = n; };
 
-	std::string getVardas () const { return vardas_; };
-	std::string getPavarde () const { return pavarde_; };
 	double getNdrez (int j) { return ndrez_[j]; };
 	bool ndrez_ar_tuscias() const { return ndrez_.empty(); };
 	int ndrez_dydis () const {return ndrez_.size(); };
@@ -44,9 +52,9 @@ class studentas
 
 	friend std::ofstream & operator << (std::ofstream & os, studentas & a);
 
-	studentas() { vardas_ = ""; pavarde_ = ""; ndrez_ = {}; egzaminorez_ = 0; galutinis_ = 0;};
+	studentas(std::string vardas = "", std::string pavarde = "", std::vector<double> ndrez = {}, double egzaminorez = 0) 
+	: zmogus{vardas, pavarde}, ndrez_{ndrez}, egzaminorez_{egzaminorez} {}
 	~studentas() {};
-
 };
 
 bool operator > (const studentas &a, const studentas &b);

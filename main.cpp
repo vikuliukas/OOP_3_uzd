@@ -45,7 +45,7 @@ int main()
 		std::string failo_pav;
 		std::cout<<"Įveskite failo pavadinimą iš kurio norite nuskaityti duomenis. (pvz. kursiokai1)\n";
 		std::cin>>failo_pav;
-		//failo_pav = "kursiokai1";
+		//failo_pav = "kursiokai3";
 		failo_pav += ".txt";
 		try
 		{
@@ -80,7 +80,7 @@ int main()
 	else{
 		mediana(stud);
 	}
-	
+
 	//*Rezultato išvedimas*
 	spausdinimas(stud, ilgvardas, ilgpavarde);
 	

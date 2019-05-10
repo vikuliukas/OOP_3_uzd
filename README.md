@@ -17,6 +17,16 @@
 
 ## Versiju istorija
 
+# [v1.5](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v1.5)
+
+***Prideta***
+
+- Pridėta abstrakčioji bazinė klasė  `žmogus`.
+
+**Koreguota**
+
+- Koreguota klasė `studentas`.
+
 # [v1.21](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v1.21)
 
 ***Prideta***
