@@ -21,7 +21,7 @@
 
 ***Prideta***
 
-- Pridėta abstrakčioji bazinė klasė  `žmogus`.
+- Pridėta abstrakčioji bazinė klasė  `zmogus`.
 
 **Koreguota**
 
