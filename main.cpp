@@ -75,10 +75,16 @@ int main()
 	}
 	//t = "0";
 	if(t == "0"){
-		vidurkis(stud);
+		for(size_t i = 0; i < stud.size(); i++){
+			stud[i].galutinis(vidurkis(stud[i]));
+			stud[i].ndrez_istrinti();
+		}
 	}
 	else{
-		mediana(stud);
+		for(size_t i = 0; i < stud.size(); i++){
+			stud[i].galutinis(mediana(stud[i]));
+			stud[i].ndrez_istrinti();
+		}
 	}
 
 	//*Rezultato išvedimas*

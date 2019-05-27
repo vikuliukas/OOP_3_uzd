@@ -1,0 +1,229 @@
+﻿\# Duomenu apdorojimas (2 oji užduotis)
+
+
+\begin{DoxyItemize}
+\item {\ttfamily git clone \href{https://github.com/vikuliukas/OOP_3_uzd.git}{\texttt{ https\+://github.\+com/vikuliukas/\+O\+O\+P\+\_\+3\+\_\+uzd.\+git}}}
+\item {\ttfamily cd O\+O\+P\+\_\+3\+\_\+uzd}
+\item {\ttfamily make}
+\item {\ttfamily ./main}
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item Pasirinkite kiek failų norite sugeneruoti, jei to daryti nenorite įveskite 0.
+\item Pasirinkite ar norite duomenis nuskaityti nuo failo ar suvesti ranka (suvedimui ranka įveskite 0, nuskaitimui nuo failo įveskite 1).
+\item Jei duomenis vedate ranka, nustoti vesti duomenis galite vietoje studento vardo įvedę 0.
+\item Jei duomenis skaitote nuo failo, tada įveskite failo pavadinimą (pvz. kursiokai1).
+\item Pasirinkite ar galutinį balą skaičiuoti pagal vidurį ar medianą (įveskite 0 -\/ pagal visdurki, 1 -\/ pagal mediana).
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md3}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/vikuliukas/\+O\+O\+P\+\_\+2\+\_\+uzd/releases/tag/v1.\+5\char`\"{}$>$v1.\+5$<$/a$>$}\label{md_README_autotoc_md3}
+{\itshape {\bfseries{Prideta}}}
+
+
+\begin{DoxyItemize}
+\item Pridėta abstrakčioji bazinė klasė {\ttfamily žmogus}.
+\end{DoxyItemize}
+
+{\bfseries{Koreguota}}
+
+
+\begin{DoxyItemize}
+\item Koreguota klasė {\ttfamily studentas}.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md4}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/vikuliukas/\+O\+O\+P\+\_\+2\+\_\+uzd/releases/tag/v1.\+21\char`\"{}$>$v1.\+21$<$/a$>$}\label{md_README_autotoc_md4}
+{\itshape {\bfseries{Prideta}}}
+
+
+\begin{DoxyItemize}
+\item Pridėtas friend operatorius $<$$<$.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md5}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/vikuliukas/\+O\+O\+P\+\_\+2\+\_\+uzd/releases/tag/v1.\+2\char`\"{}$>$v1.\+2$<$/a$>$}\label{md_README_autotoc_md5}
+{\itshape {\bfseries{Prideta}}}
+
+
+\begin{DoxyItemize}
+\item Pridėti operatoriai $>$,$>$=,$<$,$<$=,==,=!;
+\item Pridėtas failas \mbox{\hyperlink{operatoriai_8cpp_source}{operatoriai.\+cpp}}, kur bus sudėtos visos mano sukurtų operatorių funkcijos.
+\end{DoxyItemize}
+
+{\bfseries{Koreguota}}
+
+
+\begin{DoxyItemize}
+\item Panaikinta funkcija Pagal\+\_\+\+Galutini, vietoje jos naudojamas naujas operatorius $>$;
+\item Pakoreguotas makefile, jame priddėtas failas \mbox{\hyperlink{operatoriai_8cpp_source}{operatoriai.\+cpp}}.
+\item Koreguotas Read\+Me failas.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md6}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/vikuliukas/\+O\+O\+P\+\_\+2\+\_\+uzd/releases/tag/v1.\+1\char`\"{}$>$v1.\+1$<$/a$>$}\label{md_README_autotoc_md6}
+
+\begin{DoxyItemize}
+\item Palyginimas tarp struct ir class\+:
+
+Naudojant struct\+: {\ttfamily Kai studentų skaičius 1000, visa programa užtruko 0.\+520879 sek.} {\ttfamily Kai studentų skaičius 10000, visa programa užtruko 5.\+03412 sek.} {\ttfamily Kai studentų skaičius 100000, visa programa užtruko 50.\+4217 sek.}
+
+Naudojant class\+: {\ttfamily Kai studentų skaičius 1000, visa programa užtruko 0.\+536229 sek.} {\ttfamily Kai studentų skaičius 10000, visa programa užtruko 5.\+35838 sek.} {\ttfamily Kai studentų skaičius 100000, visa programa užtruko 52.\+5402 sek.}
+\item Palyginimas tarp skirtinų optimizacijų\+:
+
+Nenaudonat optimizacijos\+: {\ttfamily Kai studentų skaičius 10000, visa programa užtruko 5.\+38348 sek.} {\ttfamily Kai studentų skaičius 100000, visa programa užtruko 52.\+9167 sek.}
+
+-\/O1 \+: {\ttfamily Kai studentų skaičius 10000, visa programa užtruko 4.\+12694 sek.} {\ttfamily Kai studentų skaičius 100000, visa programa užtruko 40.\+2847 sek.}
+
+-\/O2 \+: {\ttfamily Kai studentų skaičius 10000, visa programa užtruko 1.\+9451 sek.} {\ttfamily Kai studentų skaičius 100000, visa programa užtruko 18.\+7614 sek.}
+
+-\/O3 \+: {\ttfamily Kai studentų skaičius 10000, visa programa užtruko 2.\+00216 sek.} {\ttfamily Kai studentų skaičius 100000, visa programa užtruko 19.\+1879 sek.}
+\end{DoxyItemize}
+
+{\bfseries{Koreguota}}
+
+
+\begin{DoxyItemize}
+\item Iš struct pakeista į class.
+\item Pakoreguotos funkcijos, kad veiktu ir su class.
+\end{DoxyItemize}
+
+\#\+Papildoma užduotis \hypertarget{md_README_autotoc_md7}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/vikuliukas/\+O\+O\+P\+\_\+2\+\_\+uzd/releases/tag/p1.\+0\char`\"{}$>$p1.\+0$<$/a$>$}\label{md_README_autotoc_md7}
+Papilodmos užduoties įdiegimas (Unix kompiuteryje) naudojant clang kompiliatorių.
+\begin{DoxyItemize}
+\item {\ttfamily git clone \href{https://github.com/vikuliukas/OOP_2_uzd.git}{\texttt{ https\+://github.\+com/vikuliukas/\+O\+O\+P\+\_\+2\+\_\+uzd.\+git}}}
+\item {\ttfamily cd O\+O\+P\+\_\+2\+\_\+uzd}
+\item {\ttfamily cd Papildoma}
+\item {\ttfamily cd vector/deque}
+\item {\ttfamily make}
+\item {\ttfamily ./main} Instrukcijos\+:
+\item Pasirinkite kiek failų norite sugeneruoti, jei to daryti nenorite įveskite 0.
+\item Pasirinkite ar norite duomenis nuskaityti nuo failo ar suvesti ranka (suvedimui ranka įveskite 0, nuskaitimui nuo failo įveskite 1).
+\item Jei duomenis vedate ranka, nustoti vesti duomenis galite vietoje studento vardo įvedę 0.
+\item Jei duomenis skaitote nuo failo, tada įveskite failo pavadinimą (pvz. kursiokai1).
+\item Pasirinkite ar galutinį balą skaičiuoti pagal vidurį ar medianą (įveskite 0 -\/ pagal visdurki, 1 -\/ pagal mediana).
+\item Pasirinkite ar norite naudoti funkciją rask\+Minksrus(), ar iterpk\+Kieti() (įveskite 0 -\/ funkcijai rask\+Minkstus(), 1 -\/ funkcijai iterpk\+Kietus()).
+\item Programos įvykdymo laikai surašyti faile \char`\"{}bandymai\char`\"{}. Išvados\+:
+\item Jei naudojate std\+::vector, tada funkcija rask\+Minkstus() yra efektivesnė nei funkcija iterpk\+Kietus().
+\item Jei naudojate std\+::deque, tada funkcija iterpk\+Kietus() yra efektivesnė nei funkcija rask\+Minkstus().
+\item Jeigu jums reikia įterpti duomenis į konteinerio pradžią, tada std\+::deque turi funkciją, kuri yra skirta būtent tam.
+\end{DoxyItemize}
+
+{\itshape {\bfseries{Prideta}}}
+
+
+\begin{DoxyItemize}
+\item Pridėtos funkcijos rask\+Minkstus ir iterpk\+Kieta.
+\item Pridėta galimybė pasirinkti kiek pažymiu kiekvienas studentas turės sugeneruotuose failuose.
+\item Pridėta galimybė įvesti failo, iš kurio norite nuskaityti duomenis, pavadinimą.
+\item Pridėtas failas \char`\"{}bandymai\char`\"{}, kuriame surašyti visi testavimo rezultatai.
+\end{DoxyItemize}
+
+{\bfseries{Koreguota}}
+
+
+\begin{DoxyItemize}
+\item Pakeista spausdinmo funkcija.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md8}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/vikuliukas/\+O\+O\+P\+\_\+2\+\_\+uzd/releases/tag/v1.\+0\char`\"{}$>$v1.\+0$<$/a$>$}\label{md_README_autotoc_md8}
+{\itshape {\bfseries{Prideta}}}
+
+
+\begin{DoxyItemize}
+\item Pridėta funkcija strategija\+\_\+2.
+\end{DoxyItemize}
+
+{\bfseries{Koreguota}}
+
+
+\begin{DoxyItemize}
+\item Fukcijos skaitymas pavadinimas pakeistas į strategija\+\_\+1.
+\item Funkcijose vidurkis ir mediana galutiniam balui skaičiuoti pridėta round funcija (nes jei galutinis balas 4,9999 tada jis nepatenka į šaunuolius, tačiau output yra 5,00 nes suapvalina funkcija std\+::setprecision).
+\item Padaryti bandymai su skirtingomis strategijomis, tačiau laikas nelabai skiriasi, nes programoje abiem atvejais surikiuoja galutiniu balus ir tik tada juos perkialia į skirtingus konteinerius.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md9}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/vikuliukas/\+O\+O\+P\+\_\+2\+\_\+uzd/releases/tag/v0.\+52\char`\"{}$>$v0.\+52$<$/a$>$}\label{md_README_autotoc_md9}
+
+\begin{DoxyItemize}
+\item Pataisytos visos programos versijos su skirtingais konteineriais pagal 0.\+42 versiją.
+\item Panaudoti duomenys ištrinami.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md10}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/vikuliukas/\+O\+O\+P\+\_\+2\+\_\+uzd/releases/tag/v0.\+51\char`\"{}$>$v0.\+51$<$/a$>$}\label{md_README_autotoc_md10}
+{\bfseries{Koreguota}}
+
+
+\begin{DoxyItemize}
+\item Pataisyta versija 0.\+5, kad panaudoti duomenys būtu ištrinti.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md11}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/vikuliukas/\+O\+O\+P\+\_\+2\+\_\+uzd/releases/tag/v0.\+5\char`\"{}$>$v0.\+5$<$/a$>$}\label{md_README_autotoc_md11}
+{\itshape {\bfseries{Prideta}}}
+
+
+\begin{DoxyItemize}
+\item Skirtingi aplankalai, kuriose sudėta skirtingos programos versijos naudojančios std\+::vector, std\+::list ir std\+::deque.
+\end{DoxyItemize}
+
+{\bfseries{Koreguota}}
+
+
+\begin{DoxyItemize}
+\item Koreguota programos v0.\+41 versija su skirtingais konteineriais.
+\item Failas bandymai dabar saugo testavimų rezultatus, kurie rodo programos veikimo laiką naudojant skirtingus konteinerius.
+\item Pataisytas Makefilas.
+\item Papildytas R\+E\+A\+D\+ME failas.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md12}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/vikuliukas/\+O\+O\+P\+\_\+2\+\_\+uzd/releases/tag/v0.\+42\char`\"{}$>$v0.\+42$<$/a$>$}\label{md_README_autotoc_md12}
+{\bfseries{Koreguota}}
+
+
+\begin{DoxyItemize}
+\item Pakeista funkcija rand() į std\+::random\+\_\+device.
+\item Žmogus gali pasirinkti kiek failų nori sugeneruoti (seniau galėjo tik 1).
+\item Ištrintos funcijos atsitiktinis ir pagal\+\_\+pavarde.
+\item Rezultatų faile mokiniai surušiuoti pagal galutinius pažymius (seniau buvo pagal pavardes).
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md13}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/vikuliukas/\+O\+O\+P\+\_\+2\+\_\+uzd/releases/tag/v0.\+41\char`\"{}$>$v0.\+41$<$/a$>$}\label{md_README_autotoc_md13}
+{\bfseries{Koreguota}}
+
+
+\begin{DoxyItemize}
+\item Pataysyta versija 0.\+4. Programa dabar surikuoja studentus pagal galutinius pažymius ir tada nukopijuoja i skirtingus vektorius pagal galutini bala.
+\item Perdaryti testai, kuriu rezultatai išsaugoti faile bandymai (programa užtrunka ilgiau skirstydama i skirtingus vektorius nei iš karto rašant i failus).
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md14}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/vikuliukas/\+O\+O\+P\+\_\+2\+\_\+uzd/releases/tag/v0.\+4\char`\"{}$>$v0.\+4$<$/a$>$}\label{md_README_autotoc_md14}
+{\itshape {\bfseries{Prideta}}}
+
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{irasymas_8cpp_source}{irasymas.\+cpp}} ir \mbox{\hyperlink{skaitymas_8cpp_source}{skaitymas.\+cpp}} (skirtingi cpp failai, ka butu lengviau atskirti kas vyksta kai žmogus nori ivesti ar nuskaityti duomenis)
+\item Funkcija \char`\"{}failu\+\_\+generavimas\char`\"{}, kuri sukuria faila su atsitiktiniais duomenimis.
+\item Programa praneša jei faile yra per didelis skaicius prie pažymiu ar vietoje skaiciaus yra raide ir kurioje eiluteje yra tokia klaida.
+\item Pridetas failas \char`\"{}bandymai\char`\"{}, kuriame buvo atlikta programos veikimo greicio analize (darant analize žmogus ranka nenurodinejo ar nori nuskaityti nuo failo ar pan., tai buvo nurodyta programos viduje, kad skaiciavimai butu tikslesni).
+\end{DoxyItemize}
+
+{\bfseries{Koreguota}}
+
+
+\begin{DoxyItemize}
+\item Pataisyta, kad programa praneštu žmogui jei ka ivede neteisingai (dabar nebera problemos ir su pvz a1).
+\item Pataisytos funkcijos mediana ir vidurkis.
+\item Funcija \char`\"{}spausdinimas\char`\"{} neišveda rezultato i ekrana o išsaugo skirtinguose failuose pagal galutini bala.
+\item Pakeista biblioteka iš ctime i chrono.
+\item Pataisytas Makefilas.
+\item Papildytas R\+E\+A\+D\+ME failas.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md15}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/vikuliukas/\+O\+O\+P\+\_\+2\+\_\+uzd/releases/tag/v0.\+3\char`\"{}$>$v0.\+3$<$/a$>$}\label{md_README_autotoc_md15}
+{\itshape {\bfseries{Prideta}}}
+
+-\/funcijos.\+cpp ir \mbox{\hyperlink{struktura_8h_source}{struktura.\+h}}
+
+{\bfseries{Koreguota}}
+
+
+\begin{DoxyItemize}
+\item Pakeista, kad programa praneštu žmogui, jei vietoje skaiciaus ivede raide ar netinkanti skaiciu ir leidžia ivesti iš naujo. (taciau yra problema jei reikia ivesti 1 o žmogus iveda pvz. a1)
+\item Duomenu skaitymo iš failo funkcija, programa praneša jei neranda failo.
+\item Pakeistas Makefilas.
+\item Papildytas R\+E\+A\+D\+ME failas.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md16}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/vikuliukas/\+O\+O\+P\+\_\+2\+\_\+uzd/releases/tag/v0.\+2\char`\"{}$>$v0.\+2$<$/a$>$}\label{md_README_autotoc_md16}
+{\itshape {\bfseries{Prideta}}}
+
+
+\begin{DoxyItemize}
+\item Duomenu skaitymo nuo failo funkcija.
+\item Funkcija, kuri pavardes surušiuoja abeceles tvarka.
+\end{DoxyItemize}
+
+{\bfseries{Koreguota}}
+
+
+\begin{DoxyItemize}
+\item Rezultatus atsdausdina išlygiuotai pagal ilgiausia varda ir pavarde.
+\item Papildytas R\+E\+A\+D\+ME failas.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md17}{}\doxysection{$<$a href=\char`\"{}https\+://github.\+com/vikuliukas/\+O\+O\+P\+\_\+2\+\_\+uzd/releases/tag/v0.\+1\char`\"{}$>$v0.\+1$<$/a$>$}\label{md_README_autotoc_md17}
+{\itshape {\bfseries{Prideta}}}
+
+
+\begin{DoxyItemize}
+\item Pirmine programos versija. 
+\end{DoxyItemize}

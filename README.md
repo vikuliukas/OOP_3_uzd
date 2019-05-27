@@ -1,6 +1,6 @@
 ﻿﻿# Duomenu apdorojimas (2 oji užduotis)
 
-## Idiegimas (Unix kompiuteryje) naudojant clang kompiliatorių.
+## Idiegimas (Unix kompiuteryje).
 
 - `git clone https://github.com/vikuliukas/OOP_3_uzd.git`
 - `cd OOP_3_uzd`
@@ -13,9 +13,94 @@
 - Pasirinkite ar norite duomenis nuskaityti nuo failo ar suvesti ranka (suvedimui ranka įveskite 0, nuskaitimui nuo failo įveskite 1).
 - Jei duomenis vedate ranka, nustoti vesti duomenis galite vietoje studento vardo įvedę 0.
 - Jei duomenis skaitote nuo failo, tada įveskite failo pavadinimą (pvz. kursiokai1).
-- Pasirinkite ar galutinį balą skaičiuoti pagal vidurį ar medianą (įveskite 0 - pagal visdurki, 1 - pagal mediana).
+- Pasirinkite ar galutinį balą skaičiuoti pagal vidurį ar medianą (įveskite 0 - pagal vidurki, 1 - pagal mediana).
 
 ## Versiju istorija
+
+# [v2.0](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v2.0)
+
+- Google Unit Tests
+
+```shell
+#include "struktura.h"
+#include "funkcijos.cpp"
+#include "operatoriai.cpp"
+#include <gtest/gtest.h>
+
+studentas a;
+
+TEST(ND_rezultatai, ar_vectorius_tuscias)
+{
+    ASSERT_EQ(0, a.ndrez_ar_tuscias());
+}
+
+TEST(ND_rezultatai, rezultatu_suma)
+{
+    ASSERT_EQ(24, a.ndrez_suma());
+}
+
+TEST(ND_rezultatai, rezultatu_skaicius)
+{
+    ASSERT_EQ(6, a.ndrez_dydis());
+}
+
+TEST(galutinis, skaiciuojant_pagal_mediana)
+{
+    ASSERT_EQ(5.6, mediana(a));
+}
+
+TEST(galutinis, skaiciuojant_pagal_vidurki)
+{
+    ASSERT_EQ(5.8, vidurkis(a));
+}
+
+int main(int argc, char **argv) {
+    a.vardas("Viktorija");
+    a.pavarde("Kabelyte");
+    a.ndrez(1);
+    a.ndrez(2);
+    a.ndrez(3);
+    a.ndrez(4);
+    a.ndrez(5);
+    a.ndrez(9);
+    a.egzaminorez(7);
+
+    testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
+```
+Gauti rezultatai:
+
+```shell
+[==========] Running 5 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 3 tests from ND_rezultatai
+[ RUN      ] ND_rezultatai.ar_vectorius_tuscias
+[       OK ] ND_rezultatai.ar_vectorius_tuscias (0 ms)
+[ RUN      ] ND_rezultatai.rezultatu_suma
+[       OK ] ND_rezultatai.rezultatu_suma (0 ms)
+[ RUN      ] ND_rezultatai.rezultatu_skaicius
+[       OK ] ND_rezultatai.rezultatu_skaicius (0 ms)
+[----------] 3 tests from ND_rezultatai (3 ms total)
+
+[----------] 2 tests from galutinis
+[ RUN      ] galutinis.skaiciuojant_pagal_mediana
+[       OK ] galutinis.skaiciuojant_pagal_mediana (0 ms)
+[ RUN      ] galutinis.skaiciuojant_pagal_vidurki
+[       OK ] galutinis.skaiciuojant_pagal_vidurki (0 ms)
+[----------] 2 tests from galutinis (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 2 test cases ran. (9 ms total)
+[  PASSED  ] 5 tests.
+```
+***Prideta***
+
+- Pridėtas katalogas `doxygen`, kuriame galima rasti programos dokumentaciją padaryta naudojant Doxygen.
+
+**Koreguota**
+
+- Pakeistos funkcijos `vidurkis` ir `mediana`, kad būtu lengviau daryti unit testus.
 
 # [v1.5](https://github.com/vikuliukas/OOP_2_uzd/releases/tag/v1.5)
 

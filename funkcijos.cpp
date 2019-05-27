@@ -1,47 +1,40 @@
 ﻿#include "struktura.h"
 
-void vidurkis(std::vector<studentas> &stud)
+double vidurkis(studentas & a)
 {	
 	double vid;
-	for (std::size_t i = 0; i < stud.size(); i++)
+
+	if (a.ndrez_ar_tuscias())
 	{
-		if (stud[i].ndrez_ar_tuscias())
-		{
-			vid = 0;
-		}
-		else
-		{
-			vid = stud[i].ndrez_suma() / stud[i].ndrez_dydis();
-		}
-		stud[i].galutinis(round((0.40 * vid + 0.60 * stud[i].getEgzaminorez())*100)/100);
-		stud[i].ndrez_istrinti();
+		vid = 0;
 	}
+	else
+	{
+		vid = a.ndrez_suma() / a.ndrez_dydis();
+	}
+	return round((0.40 * vid + 0.60 * a.getEgzaminorez())*100)/100;
 }
 
-void mediana(std::vector<studentas> &stud)
+double mediana(studentas & a)
 {
 	double med;
-	for (std::size_t i = 0; i < stud.size(); i++)
+	if (a.ndrez_ar_tuscias())
 	{
-		if (stud[i].ndrez_ar_tuscias())
+		med = 0;
+	}
+	else
+	{
+		a.ndrez_isrikiuoti();
+		if (a.ndrez_dydis() % 2 == 0)
 		{
-			med = 0;
+			med = (double)(a.getNdrez(a.ndrez_dydis() / 2) + a.getNdrez(a.ndrez_dydis() / 2 - 1)) / 2;
 		}
 		else
 		{
-			stud[i].ndrez_isrikiuoti();
-			if (stud[i].ndrez_dydis() % 2 == 0)
-			{
-				med = (double)(stud[i].getNdrez(stud[i].ndrez_dydis() / 2) + stud[i].getNdrez(stud[i].ndrez_dydis() / 2 - 1)) / 2;
-			}
-			else
-			{
-				med = (double)stud[i].getNdrez(stud[i].ndrez_dydis() / 2);
-			}
+			med = (double)a.getNdrez(a.ndrez_dydis() / 2);
 		}
-		stud[i].galutinis(round((0.40 * med + 0.60 * stud[i].getEgzaminorez())*100)/100);
-		stud[i].ndrez_istrinti();
 	}
+	return round((0.40 * med + 0.60 * a.getEgzaminorez())*100)/100;
 }
 
 void spausdinimas(std::vector<studentas> &stud, std::size_t ilgvardas, std::size_t ilgpavarde)
@@ -78,4 +71,4 @@ void spausdinimas(std::vector<studentas> &stud, std::size_t ilgvardas, std::size
 	saunuoliai.shrink_to_fit();
 	vargsiukai.clear();
 	vargsiukai.shrink_to_fit();
-} 
+}

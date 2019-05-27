@@ -67,8 +67,8 @@ bool operator != (const studentas &a, const studentas &b);
 void irasimas(std::vector<studentas> &stud, std::size_t &ilgvardas, std::size_t &ilgpavarde);
 void skaitymas(std::string failo_pav, std::vector<studentas> &stud, std::size_t &ilgvardas, std::size_t &ilgpavarde);
 int tikrinimas(std::string a);
-void vidurkis(std::vector<studentas> &stud);
-void mediana(std::vector<studentas> &stud);
+double vidurkis(studentas &a);
+double mediana(studentas &a);
 void spausdinimas(std::vector<studentas> &stud, std::size_t ilgvardas, std::size_t ilgpavarde);
 void failu_generavimas(int &failu_sk);
 
