@@ -1,4 +1,4 @@
-﻿﻿# Duomenu apdorojimas (2 oji užduotis)
+﻿﻿# Duomenu apdorojimas (3 oji užduotis)
 
 ## Idiegimas (Unix kompiuteryje).
 
